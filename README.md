@@ -1,0 +1,2 @@
+# PCMagTool
+Bilgisayar Yönetim Aracı
