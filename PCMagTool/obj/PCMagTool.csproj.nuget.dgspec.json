@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yazilimturk\\source\\repos\\PCMagTool\\PCMagTool\\PCMagTool.csproj": {}
+    "C:\\Users\\Yılmaz Mert Çayır\\source\\repos\\PCMagTool\\PCMagTool\\PCMagTool.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yazilimturk\\source\\repos\\PCMagTool\\PCMagTool\\PCMagTool.csproj": {
+    "C:\\Users\\Yılmaz Mert Çayır\\source\\repos\\PCMagTool\\PCMagTool\\PCMagTool.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yazilimturk\\source\\repos\\PCMagTool\\PCMagTool\\PCMagTool.csproj",
+        "projectUniqueName": "C:\\Users\\Yılmaz Mert Çayır\\source\\repos\\PCMagTool\\PCMagTool\\PCMagTool.csproj",
         "projectName": "PCMagTool",
-        "projectPath": "C:\\Users\\yazilimturk\\source\\repos\\PCMagTool\\PCMagTool\\PCMagTool.csproj",
-        "packagesPath": "C:\\Users\\yazilimturk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yazilimturk\\source\\repos\\PCMagTool\\PCMagTool\\obj\\",
+        "projectPath": "C:\\Users\\Yılmaz Mert Çayır\\source\\repos\\PCMagTool\\PCMagTool\\PCMagTool.csproj",
+        "packagesPath": "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yılmaz Mert Çayır\\source\\repos\\PCMagTool\\PCMagTool\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\yazilimturk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Yılmaz Mert Çayır\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -43,6 +44,12 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "System.Management": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -61,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -17,3 +17,26 @@ C:\Users\yazilimturk\source\repos\PCMagTool\PCMagTool\obj\Debug\net5.0-windows\r
 C:\Users\yazilimturk\source\repos\PCMagTool\PCMagTool\obj\Debug\net5.0-windows\PCMagTool.pdb
 C:\Users\yazilimturk\source\repos\PCMagTool\PCMagTool\obj\Debug\net5.0-windows\PCMagTool.genruntimeconfig.cache
 C:\Users\yazilimturk\source\repos\PCMagTool\PCMagTool\obj\Debug\net5.0-windows\PCMagTool.Properties.Resources.resources
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\bin\Debug\net5.0-windows\PCMagTool.exe
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\bin\Debug\net5.0-windows\PCMagTool.deps.json
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\bin\Debug\net5.0-windows\PCMagTool.runtimeconfig.json
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\bin\Debug\net5.0-windows\PCMagTool.runtimeconfig.dev.json
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\bin\Debug\net5.0-windows\PCMagTool.dll
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\bin\Debug\net5.0-windows\PCMagTool.pdb
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\obj\Debug\net5.0-windows\PCMagTool.csproj.AssemblyReference.cache
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\obj\Debug\net5.0-windows\PCMagTool.Form1.resources
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\obj\Debug\net5.0-windows\PCMagTool.Properties.Resources.resources
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\obj\Debug\net5.0-windows\PCMagTool.csproj.GenerateResource.cache
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\obj\Debug\net5.0-windows\PCMagTool.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\obj\Debug\net5.0-windows\PCMagTool.AssemblyInfoInputs.cache
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\obj\Debug\net5.0-windows\PCMagTool.AssemblyInfo.cs
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\obj\Debug\net5.0-windows\PCMagTool.csproj.CoreCompileInputs.cache
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\obj\Debug\net5.0-windows\PCMagTool.dll
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\obj\Debug\net5.0-windows\refint\PCMagTool.dll
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\obj\Debug\net5.0-windows\PCMagTool.pdb
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\obj\Debug\net5.0-windows\PCMagTool.genruntimeconfig.cache
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\obj\Debug\net5.0-windows\ref\PCMagTool.dll
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\bin\Debug\net5.0-windows\System.CodeDom.dll
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\bin\Debug\net5.0-windows\System.Management.dll
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Management.dll
+C:\Users\Yılmaz Mert Çayır\source\repos\PCMagTool\PCMagTool\obj\Debug\net5.0-windows\PCMagTool.csproj.CopyComplete

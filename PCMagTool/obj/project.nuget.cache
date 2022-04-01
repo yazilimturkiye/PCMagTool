@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "ZEWUEw6jOmQ1EH9GIfDWRXE8uCUUo5WTzGCFD8Zg04At1Fg1AD/oIpwTp6J/xj9y/TGr6oE4KCHi1wP0TjtWMQ==",
+  "dgSpecHash": "2+q3An1ArtqWc4H+5WqoE9IHvR058+n2P2h6Rgh172o9ZRGxiyQB9t4F+7mIpsrLaYkWkWkCstHwRykASOdRyw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yazilimturk\\source\\repos\\PCMagTool\\PCMagTool\\PCMagTool.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Yılmaz Mert Çayır\\source\\repos\\PCMagTool\\PCMagTool\\PCMagTool.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
+    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512",
+    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
