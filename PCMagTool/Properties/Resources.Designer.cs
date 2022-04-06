@@ -83,6 +83,16 @@ namespace PCMagTool.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Batarya {
+            get {
+                object obj = ResourceManager.GetObject("Batarya", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap bilgisayar {
             get {
                 object obj = ResourceManager.GetObject("bilgisayar", resourceCulture);
@@ -106,6 +116,16 @@ namespace PCMagTool.Properties {
         internal static System.Drawing.Bitmap cpu {
             get {
                 object obj = ResourceManager.GetObject("cpu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan {
+            get {
+                object obj = ResourceManager.GetObject("fan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +163,49 @@ namespace PCMagTool.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap klavye {
+            get {
+                object obj = ResourceManager.GetObject("klavye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap kucult {
             get {
                 object obj = ResourceManager.GetObject("kucult", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap kullanici {
+            get {
+                object obj = ResourceManager.GetObject("kullanici", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap optik {
+            get {
+                object obj = ResourceManager.GetObject("optik", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap pcmagtool_fw {
+            get {
+                object obj = ResourceManager.GetObject("pcmagtool_fw", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

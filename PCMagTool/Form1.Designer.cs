@@ -30,25 +30,33 @@ namespace PCMagTool
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("CPU", 2, 2);
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("GPU", 3, 3);
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("RAM", 4, 4);
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("AnaKart", 0, 0);
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Ağ", 6, 6);
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Ses", 9, 9);
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Depolama", 8, 8);
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Bilgisayar", 1, 1, new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Ağ", 6, 6);
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Anakart", 0, 0);
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Batarya", 12, 12);
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("CPU", 2, 2);
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Depolama", 8, 8);
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Fan", 13, 13);
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("GPU", 3, 3);
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Klavye", 14, 14);
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Optik Sürücü", 15, 15);
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("RAM", 4, 4);
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Ses", 9, 9);
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Bilgisayar", 1, 1, new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2,
             treeNode3,
             treeNode4,
             treeNode5,
             treeNode6,
-            treeNode7});
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("İşletim Sistemi", 5, 5);
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Bios", 7, 7);
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Kullanıcı");
+            treeNode7,
+            treeNode8,
+            treeNode9,
+            treeNode10,
+            treeNode11});
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Bios", 7, 7);
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Kullanıcı", 11, 11);
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("İşletim Sistemi", 5, 5);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.label_ustbaslik = new System.Windows.Forms.Label();
             this.label_altbaslik = new System.Windows.Forms.Label();
@@ -77,8 +85,8 @@ namespace PCMagTool
             // pictureBox_logo
             // 
             this.pictureBox_logo.BackColor = System.Drawing.Color.White;
-            this.pictureBox_logo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_logo.Image")));
-            this.pictureBox_logo.Location = new System.Drawing.Point(10, 28);
+            this.pictureBox_logo.Image = global::PCMagTool.Properties.Resources.pcmagtool_fw;
+            this.pictureBox_logo.Location = new System.Drawing.Point(646, 19);
             this.pictureBox_logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox_logo.Name = "pictureBox_logo";
             this.pictureBox_logo.Size = new System.Drawing.Size(75, 75);
@@ -92,7 +100,7 @@ namespace PCMagTool
             this.label_ustbaslik.BackColor = System.Drawing.Color.White;
             this.label_ustbaslik.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_ustbaslik.ForeColor = System.Drawing.Color.Crimson;
-            this.label_ustbaslik.Location = new System.Drawing.Point(91, 9);
+            this.label_ustbaslik.Location = new System.Drawing.Point(14, 9);
             this.label_ustbaslik.Name = "label_ustbaslik";
             this.label_ustbaslik.Size = new System.Drawing.Size(144, 28);
             this.label_ustbaslik.TabIndex = 3;
@@ -103,7 +111,7 @@ namespace PCMagTool
             this.label_altbaslik.AutoSize = true;
             this.label_altbaslik.BackColor = System.Drawing.Color.White;
             this.label_altbaslik.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_altbaslik.Location = new System.Drawing.Point(91, 37);
+            this.label_altbaslik.Location = new System.Drawing.Point(14, 37);
             this.label_altbaslik.Name = "label_altbaslik";
             this.label_altbaslik.Size = new System.Drawing.Size(242, 19);
             this.label_altbaslik.TabIndex = 4;
@@ -130,7 +138,7 @@ namespace PCMagTool
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(230, 19);
+            this.label1.Location = new System.Drawing.Point(153, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 17);
             this.label1.TabIndex = 8;
@@ -165,59 +173,80 @@ namespace PCMagTool
             // 
             this.treeView1.BackColor = System.Drawing.Color.White;
             this.treeView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.treeView1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.treeView1.FullRowSelect = true;
-            this.treeView1.ImageIndex = 0;
+            this.treeView1.ImageIndex = 10;
             this.treeView1.ImageList = this.ımageList1;
+            this.treeView1.Indent = 30;
+            this.treeView1.ItemHeight = 30;
             this.treeView1.Location = new System.Drawing.Point(-2, 0);
             this.treeView1.Name = "treeView1";
-            treeNode1.ImageIndex = 2;
-            treeNode1.Name = "altdugum_islemci";
-            treeNode1.SelectedImageIndex = 2;
-            treeNode1.Text = "CPU";
-            treeNode2.ImageIndex = 3;
-            treeNode2.Name = "altdugum_ekran";
-            treeNode2.SelectedImageIndex = 3;
-            treeNode2.Text = "GPU";
-            treeNode3.ImageIndex = 4;
-            treeNode3.Name = "altdugum_ram";
-            treeNode3.SelectedImageIndex = 4;
-            treeNode3.Text = "RAM";
-            treeNode4.ImageIndex = 0;
-            treeNode4.Name = "altdugum_anakart";
-            treeNode4.SelectedImageIndex = 0;
-            treeNode4.Text = "AnaKart";
-            treeNode5.ImageIndex = 6;
-            treeNode5.Name = "altdugum_ag";
-            treeNode5.SelectedImageIndex = 6;
-            treeNode5.Text = "Ağ";
-            treeNode6.ImageIndex = 9;
-            treeNode6.Name = "altdugum_ses";
-            treeNode6.SelectedImageIndex = 9;
-            treeNode6.Text = "Ses";
-            treeNode7.ImageIndex = 8;
-            treeNode7.Name = "altdugum_depolama";
-            treeNode7.SelectedImageIndex = 8;
-            treeNode7.Text = "Depolama";
-            treeNode8.ImageIndex = 1;
-            treeNode8.Name = "kokdugum_bilgisayar";
-            treeNode8.SelectedImageIndex = 1;
-            treeNode8.Text = "Bilgisayar";
-            treeNode9.ImageIndex = 5;
-            treeNode9.Name = "kokdugum_isletimsistemi";
-            treeNode9.SelectedImageIndex = 5;
-            treeNode9.Text = "İşletim Sistemi";
-            treeNode10.ImageIndex = 7;
-            treeNode10.Name = "kokdugum_bios";
-            treeNode10.SelectedImageIndex = 7;
-            treeNode10.Text = "Bios";
-            treeNode11.Name = "kokdugum_kullanici";
-            treeNode11.Text = "Kullanıcı";
+            treeNode1.ImageIndex = 6;
+            treeNode1.Name = "altdugum_ag";
+            treeNode1.SelectedImageIndex = 6;
+            treeNode1.Text = "Ağ";
+            treeNode2.ImageIndex = 0;
+            treeNode2.Name = "altdugum_anakart";
+            treeNode2.SelectedImageIndex = 0;
+            treeNode2.Text = "Anakart";
+            treeNode3.ImageIndex = 12;
+            treeNode3.Name = "altdugum_batarya";
+            treeNode3.SelectedImageIndex = 12;
+            treeNode3.Text = "Batarya";
+            treeNode4.ImageIndex = 2;
+            treeNode4.Name = "altdugum_islemci";
+            treeNode4.SelectedImageIndex = 2;
+            treeNode4.Text = "CPU";
+            treeNode5.ImageIndex = 8;
+            treeNode5.Name = "altdugum_depolama";
+            treeNode5.SelectedImageIndex = 8;
+            treeNode5.Text = "Depolama";
+            treeNode6.ImageIndex = 13;
+            treeNode6.Name = "altdugum_fan";
+            treeNode6.SelectedImageIndex = 13;
+            treeNode6.Text = "Fan";
+            treeNode7.ImageIndex = 3;
+            treeNode7.Name = "altdugum_ekran";
+            treeNode7.SelectedImageIndex = 3;
+            treeNode7.Text = "GPU";
+            treeNode8.ImageIndex = 14;
+            treeNode8.Name = "altdugum_klavye";
+            treeNode8.SelectedImageIndex = 14;
+            treeNode8.Text = "Klavye";
+            treeNode9.ImageIndex = 15;
+            treeNode9.Name = "altdugum_suruculer";
+            treeNode9.SelectedImageIndex = 15;
+            treeNode9.Text = "Optik Sürücü";
+            treeNode10.ImageIndex = 4;
+            treeNode10.Name = "altdugum_ram";
+            treeNode10.SelectedImageIndex = 4;
+            treeNode10.Text = "RAM";
+            treeNode11.ImageIndex = 9;
+            treeNode11.Name = "altdugum_ses";
+            treeNode11.SelectedImageIndex = 9;
+            treeNode11.Text = "Ses";
+            treeNode12.ImageIndex = 1;
+            treeNode12.Name = "kokdugum_bilgisayar";
+            treeNode12.SelectedImageIndex = 1;
+            treeNode12.Text = "Bilgisayar";
+            treeNode13.ImageIndex = 7;
+            treeNode13.Name = "kokdugum_bios";
+            treeNode13.SelectedImageIndex = 7;
+            treeNode13.Text = "Bios";
+            treeNode14.ImageIndex = 11;
+            treeNode14.Name = "kokdugum_kullanici";
+            treeNode14.SelectedImageIndex = 11;
+            treeNode14.Text = "Kullanıcı";
+            treeNode15.ImageIndex = 5;
+            treeNode15.Name = "kokdugum_isletimsistemi";
+            treeNode15.SelectedImageIndex = 5;
+            treeNode15.Text = "İşletim Sistemi";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode8,
-            treeNode9,
-            treeNode10,
-            treeNode11});
-            this.treeView1.SelectedImageIndex = 0;
+            treeNode12,
+            treeNode13,
+            treeNode14,
+            treeNode15});
+            this.treeView1.SelectedImageIndex = 10;
             this.treeView1.Size = new System.Drawing.Size(713, 550);
             this.treeView1.TabIndex = 1;
             // 
@@ -236,6 +265,12 @@ namespace PCMagTool
             this.ımageList1.Images.SetKeyName(7, "chip.png");
             this.ımageList1.Images.SetKeyName(8, "hdd.png");
             this.ımageList1.Images.SetKeyName(9, "ses.png");
+            this.ımageList1.Images.SetKeyName(10, "pcmagtool.fw.png");
+            this.ımageList1.Images.SetKeyName(11, "kullanici.png");
+            this.ımageList1.Images.SetKeyName(12, "Batarya.png");
+            this.ımageList1.Images.SetKeyName(13, "fan.png");
+            this.ımageList1.Images.SetKeyName(14, "klavye.png");
+            this.ımageList1.Images.SetKeyName(15, "optik.png");
             // 
             // tabPage_donanim
             // 
@@ -259,7 +294,7 @@ namespace PCMagTool
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(91, 68);
+            this.button1.Location = new System.Drawing.Point(18, 68);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 50);
             this.button1.TabIndex = 10;
@@ -268,7 +303,7 @@ namespace PCMagTool
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(147, 68);
+            this.button2.Location = new System.Drawing.Point(74, 68);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
             this.button2.TabIndex = 11;
@@ -277,7 +312,7 @@ namespace PCMagTool
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(203, 68);
+            this.button3.Location = new System.Drawing.Point(130, 68);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(50, 50);
             this.button3.TabIndex = 12;
@@ -286,7 +321,7 @@ namespace PCMagTool
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(259, 68);
+            this.button4.Location = new System.Drawing.Point(186, 68);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(50, 50);
             this.button4.TabIndex = 13;
@@ -295,7 +330,7 @@ namespace PCMagTool
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(315, 68);
+            this.button5.Location = new System.Drawing.Point(242, 68);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(50, 50);
             this.button5.TabIndex = 14;
@@ -304,7 +339,7 @@ namespace PCMagTool
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(371, 68);
+            this.button6.Location = new System.Drawing.Point(298, 68);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(50, 50);
             this.button6.TabIndex = 15;
@@ -313,7 +348,7 @@ namespace PCMagTool
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(427, 68);
+            this.button7.Location = new System.Drawing.Point(354, 68);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(50, 50);
             this.button7.TabIndex = 16;
@@ -322,7 +357,7 @@ namespace PCMagTool
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(483, 68);
+            this.button8.Location = new System.Drawing.Point(410, 68);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(50, 50);
             this.button8.TabIndex = 17;
