@@ -149,102 +149,158 @@ namespace PCMagTool
 
                 }
 
+                ManagementObjectSearcher EkranBilgileri = new ManagementObjectSearcher("select * from Win32_DesktopMonitor"); //ekran bilgileri
+                foreach (ManagementObject EkranObje in EkranBilgileri.Get())
+                {
+                    treeView1.Nodes[0].Nodes[5].Nodes.Add("İsim : " + EkranObje["Name"]);
+                    treeView1.Nodes[0].Nodes[5].Nodes.Add("Altyazı : " + EkranObje["Caption"]);
+                    treeView1.Nodes[0].Nodes[5].Nodes.Add("Açıklama : " + EkranObje["Description"]);
+                    treeView1.Nodes[0].Nodes[5].Nodes.Add("Üretici Firma : " + EkranObje["MonitorManufacturer"]);
+                    treeView1.Nodes[0].Nodes[5].Nodes.Add("Ekran Türü : " + EkranObje["DisplayType"]);
+                    treeView1.Nodes[0].Nodes[5].Nodes.Add("Monitör Türü : " + EkranObje["MonitorType"]);
+                    treeView1.Nodes[0].Nodes[5].Nodes.Add("Bant Genişliği : " + EkranObje["Bandwidth"]);
+                    treeView1.Nodes[0].Nodes[5].Nodes.Add("X Piksel Başına Mantıksal İnç : " + EkranObje["PixelsPerXLogicalInch"]);
+                    treeView1.Nodes[0].Nodes[5].Nodes.Add("Y Piksel Başına Mantıksal İnç : " + EkranObje["PixelsPerYLogicalInch"]);
+                    treeView1.Nodes[0].Nodes[5].Nodes.Add("Yükseklik : " + EkranObje["ScreenHeight"]);
+                    treeView1.Nodes[0].Nodes[5].Nodes.Add("Genişlik : " + EkranObje["ScreenWidth"]);
+                    treeView1.Nodes[0].Nodes[5].Nodes.Add("Durum : " + EkranObje["Status"]);
+                }
+
                 ManagementObjectSearcher FanBilgileri = new ManagementObjectSearcher("select * from Win32_Fan"); //fan bilgileri
                 foreach (ManagementObject FanObje in FanBilgileri.Get())
                 {
-                    treeView1.Nodes[0].Nodes[5].Nodes.Add("İsim : " + FanObje["Name"]);
-                    treeView1.Nodes[0].Nodes[5].Nodes.Add("Aktif Soğutma : " + FanObje["ActiveCooling"]);
-                    treeView1.Nodes[0].Nodes[5].Nodes.Add("Altyazı : " + FanObje["Caption"]);
-                    treeView1.Nodes[0].Nodes[5].Nodes.Add("Açıklama : " + FanObje["Description"]);
-                    treeView1.Nodes[0].Nodes[5].Nodes.Add("İstenilen Hız : " + FanObje["DesiredSpeed"]);
-                    treeView1.Nodes[0].Nodes[5].Nodes.Add("Aygıt Kimlik : " + FanObje["DeviceID"]);
-                    treeView1.Nodes[0].Nodes[5].Nodes.Add("Değişken Hız : " + FanObje["VariableSpeed"]);
-                    treeView1.Nodes[0].Nodes[5].Nodes.Add("Durum : " + FanObje["Status"]);
-                    treeView1.Nodes[0].Nodes[5].Nodes.Add("____________________________________________________________");
+                    treeView1.Nodes[0].Nodes[6].Nodes.Add("İsim : " + FanObje["Name"]);
+                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Aktif Soğutma : " + FanObje["ActiveCooling"]);
+                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Altyazı : " + FanObje["Caption"]);
+                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Açıklama : " + FanObje["Description"]);
+                    treeView1.Nodes[0].Nodes[6].Nodes.Add("İstenilen Hız : " + FanObje["DesiredSpeed"]);
+                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Aygıt Kimlik : " + FanObje["DeviceID"]);
+                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Değişken Hız : " + FanObje["VariableSpeed"]);
+                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Durum : " + FanObje["Status"]);
+                    treeView1.Nodes[0].Nodes[6].Nodes.Add("____________________________________________________________");
                 }
 
                 ManagementObjectSearcher GPUBilgileri = new ManagementObjectSearcher("select * from Win32_VideoController"); //gpu bilgileri
                 foreach (ManagementObject GPUObje in GPUBilgileri.Get())
                 {
 
-                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Model : " + GPUObje["Name"]);
-                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Açıklama : " + GPUObje["Description"]);
-                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Marka : " + GPUObje["VideoProcessor"]);
-                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Video Açıklama : " + GPUObje["VideoModeDescription"]);
-                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Sürüm : " + GPUObje["DriverVersion"]);
-                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Yatay Çözünürlük : " + GPUObje["CurrentHorizontalResolution"]);
-                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Dikey Çözünürlük : " + GPUObje["CurrentVerticalResolution"]);
-                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Yenileme Hızı : " + GPUObje["CurrentRefreshRate"] + " Hz");
-                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Maksimum Yenileme Hızı : " + GPUObje["MaxRefreshRate"] + " Hz");
-                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Minumum Yenileme Hızı : " + GPUObje["MinRefreshRate"] + " Hz");
-                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Bellek : " + GPUObje["AdapterRAM"] + " MB");
-                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Piksel Başına Geçerli Bit Sayısı : " + GPUObje["CurrentBitsPerPixel"]);
-                    treeView1.Nodes[0].Nodes[6].Nodes.Add("Adaptör Uyumluluğu : " + GPUObje["AdapterCompatibility"]);
-                    treeView1.Nodes[0].Nodes[6].Nodes.Add("____________________________________________________________");
+                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Model : " + GPUObje["Name"]);
+                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Açıklama : " + GPUObje["Description"]);
+                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Marka : " + GPUObje["VideoProcessor"]);
+                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Video Açıklama : " + GPUObje["VideoModeDescription"]);
+                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Sürüm : " + GPUObje["DriverVersion"]);
+                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Yatay Çözünürlük : " + GPUObje["CurrentHorizontalResolution"]);
+                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Dikey Çözünürlük : " + GPUObje["CurrentVerticalResolution"]);
+                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Yenileme Hızı : " + GPUObje["CurrentRefreshRate"] + " Hz");
+                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Maksimum Yenileme Hızı : " + GPUObje["MaxRefreshRate"] + " Hz");
+                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Minumum Yenileme Hızı : " + GPUObje["MinRefreshRate"] + " Hz");
+                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Bellek : " + GPUObje["AdapterRAM"] + " MB");
+                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Piksel Başına Geçerli Bit Sayısı : " + GPUObje["CurrentBitsPerPixel"]);
+                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Adaptör Uyumluluğu : " + GPUObje["AdapterCompatibility"]);
+                    treeView1.Nodes[0].Nodes[7].Nodes.Add("____________________________________________________________");
                 }
 
                 ManagementObjectSearcher KlavyeBilgileri = new ManagementObjectSearcher("select * from Win32_Keyboard"); //klavye bilgileri
                 foreach (ManagementObject KlavyeObje in KlavyeBilgileri.Get())
                 {
-                    treeView1.Nodes[0].Nodes[7].Nodes.Add("İsim : " + KlavyeObje["Name"]);
-                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Altyazı : " + KlavyeObje["Caption"]);
-                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Açıklama : " + KlavyeObje["Description"]);
-                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Kilit : " + KlavyeObje["IsLocked"]);
-                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Düzen : " + KlavyeObje["Layout"]);
-                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Fonksiyon Tuşları Sayısı : " + KlavyeObje["NumberOfFunctionKeys"]);
-                    treeView1.Nodes[0].Nodes[7].Nodes.Add("Şifre : " + KlavyeObje["Password"]);
-                    treeView1.Nodes[0].Nodes[7].Nodes.Add("____________________________________________________________");
+                    treeView1.Nodes[0].Nodes[8].Nodes.Add("İsim : " + KlavyeObje["Name"]);
+                    treeView1.Nodes[0].Nodes[8].Nodes.Add("Altyazı : " + KlavyeObje["Caption"]);
+                    treeView1.Nodes[0].Nodes[8].Nodes.Add("Açıklama : " + KlavyeObje["Description"]);
+                    treeView1.Nodes[0].Nodes[8].Nodes.Add("Kilit : " + KlavyeObje["IsLocked"]);
+                    treeView1.Nodes[0].Nodes[8].Nodes.Add("Düzen : " + KlavyeObje["Layout"]);
+                    treeView1.Nodes[0].Nodes[8].Nodes.Add("Fonksiyon Tuşları Sayısı : " + KlavyeObje["NumberOfFunctionKeys"]);
+                    treeView1.Nodes[0].Nodes[8].Nodes.Add("Şifre : " + KlavyeObje["Password"]);
+                    treeView1.Nodes[0].Nodes[8].Nodes.Add("____________________________________________________________");
                 }
 
                 ManagementObjectSearcher DVDBilgileri = new ManagementObjectSearcher("select * from Win32_CDROMDrive"); //dvd rom bilgileri
                 foreach (ManagementObject DVDObje in DVDBilgileri.Get())
                 {
-                    treeView1.Nodes[0].Nodes[8].Nodes.Add("İsim : " + DVDObje["Name"]);
-                    treeView1.Nodes[0].Nodes[8].Nodes.Add("Altyazı : " + DVDObje["Caption"]);
-                    treeView1.Nodes[0].Nodes[8].Nodes.Add("Açıklama : " + DVDObje["Description"]);
-                    treeView1.Nodes[0].Nodes[8].Nodes.Add("Ortam Türü : " + DVDObje["MediaType"]);
-                    treeView1.Nodes[0].Nodes[8].Nodes.Add("Kimlik : " + DVDObje["Id"]);
-                    treeView1.Nodes[0].Nodes[8].Nodes.Add("Üretici Firma : " + DVDObje["Manufacturer"]);
-                    treeView1.Nodes[0].Nodes[8].Nodes.Add("Sürücü : " + DVDObje["Drive"]);
-                    treeView1.Nodes[0].Nodes[8].Nodes.Add("Transfer Oranı : " + DVDObje["TransferRate"]);
-                    treeView1.Nodes[0].Nodes[8].Nodes.Add("Sıkıştırma Yöntemi : " + DVDObje["CompressionMethod"]);
-                    treeView1.Nodes[0].Nodes[8].Nodes.Add("____________________________________________________________");
+                    treeView1.Nodes[0].Nodes[9].Nodes.Add("İsim : " + DVDObje["Name"]);
+                    treeView1.Nodes[0].Nodes[9].Nodes.Add("Altyazı : " + DVDObje["Caption"]);
+                    treeView1.Nodes[0].Nodes[9].Nodes.Add("Açıklama : " + DVDObje["Description"]);
+                    treeView1.Nodes[0].Nodes[9].Nodes.Add("Ortam Türü : " + DVDObje["MediaType"]);
+                    treeView1.Nodes[0].Nodes[9].Nodes.Add("Kimlik : " + DVDObje["Id"]);
+                    treeView1.Nodes[0].Nodes[9].Nodes.Add("Üretici Firma : " + DVDObje["Manufacturer"]);
+                    treeView1.Nodes[0].Nodes[9].Nodes.Add("Sürücü : " + DVDObje["Drive"]);
+                    treeView1.Nodes[0].Nodes[9].Nodes.Add("Transfer Oranı : " + DVDObje["TransferRate"]);
+                    treeView1.Nodes[0].Nodes[9].Nodes.Add("Sıkıştırma Yöntemi : " + DVDObje["CompressionMethod"]);
+                    treeView1.Nodes[0].Nodes[9].Nodes.Add("____________________________________________________________");
                 }
 
                 ManagementObjectSearcher RAMBilgileri = new ManagementObjectSearcher("select * from Win32_MemoryDevice"); //ram bilgileri
                 foreach (ManagementObject RAMObje in RAMBilgileri.Get())
                 {
-                    treeView1.Nodes[0].Nodes[9].Nodes.Add("Model : " + RAMObje["DeviceID"]);
+                    treeView1.Nodes[0].Nodes[10].Nodes.Add("Model : " + RAMObje["DeviceID"]);
                 }
 
                 ManagementObjectSearcher RAMBoyutu = new ManagementObjectSearcher("select * from Win32_OperatingSystem"); //ram boyutu
                 foreach (ManagementObject RAMObje2 in RAMBoyutu.Get())
                 {
-                    treeView1.Nodes[0].Nodes[9].Nodes.Add("Toplam Görünen Bellek : " + RAMObje2["TotalVisibleMemorySize"] + " KB");
-                    treeView1.Nodes[0].Nodes[9].Nodes.Add("Boştaki Fiziksel Bellek : " + RAMObje2["FreePhysicalMemory"] + " KB");
-                    treeView1.Nodes[0].Nodes[9].Nodes.Add("Toplam Sanal Bellek : " + RAMObje2["TotalVirtualMemorySize"] + " KB");
-                    treeView1.Nodes[0].Nodes[9].Nodes.Add("Boştaki Sanal Bellek : " + RAMObje2["FreeVirtualMemory"] + " KB");
+                    treeView1.Nodes[0].Nodes[10].Nodes.Add("Toplam Görünen Bellek : " + RAMObje2["TotalVisibleMemorySize"] + " KB");
+                    treeView1.Nodes[0].Nodes[10].Nodes.Add("Boştaki Fiziksel Bellek : " + RAMObje2["FreePhysicalMemory"] + " KB");
+                    treeView1.Nodes[0].Nodes[10].Nodes.Add("Toplam Sanal Bellek : " + RAMObje2["TotalVirtualMemorySize"] + " KB");
+                    treeView1.Nodes[0].Nodes[10].Nodes.Add("Boştaki Sanal Bellek : " + RAMObje2["FreeVirtualMemory"] + " KB");
                 }
 
                 ManagementObjectSearcher SesBilgileri = new ManagementObjectSearcher("select * from Win32_SoundDevice"); //ses bilgileri
                 foreach (ManagementObject SesObje in SesBilgileri.Get())
                 {
-                    treeView1.Nodes[0].Nodes[10].Nodes.Add("İsim : " + SesObje["Name"]);
-                    treeView1.Nodes[0].Nodes[10].Nodes.Add("Açıklama : " + SesObje["Description"]);
-                    treeView1.Nodes[0].Nodes[10].Nodes.Add("Altyaız : " + SesObje["Caption"]);
-                    treeView1.Nodes[0].Nodes[10].Nodes.Add("Üretici Firma : " + SesObje["Manufacturer"]);
-                    treeView1.Nodes[0].Nodes[10].Nodes.Add("MPU401 Adresi : " + SesObje["MPU401Address"]);
-                    treeView1.Nodes[0].Nodes[10].Nodes.Add("Ürüm Adı : " + SesObje["ProductName"]);
-                    treeView1.Nodes[0].Nodes[10].Nodes.Add("Durum : " + SesObje["Status"]);
-                    treeView1.Nodes[0].Nodes[10].Nodes.Add("____________________________________________________________");
+                    treeView1.Nodes[0].Nodes[11].Nodes.Add("İsim : " + SesObje["Name"]);
+                    treeView1.Nodes[0].Nodes[11].Nodes.Add("Açıklama : " + SesObje["Description"]);
+                    treeView1.Nodes[0].Nodes[11].Nodes.Add("Altyaız : " + SesObje["Caption"]);
+                    treeView1.Nodes[0].Nodes[11].Nodes.Add("Üretici Firma : " + SesObje["Manufacturer"]);
+                    treeView1.Nodes[0].Nodes[11].Nodes.Add("MPU401 Adresi : " + SesObje["MPU401Address"]);
+                    treeView1.Nodes[0].Nodes[11].Nodes.Add("Ürüm Adı : " + SesObje["ProductName"]);
+                    treeView1.Nodes[0].Nodes[11].Nodes.Add("Durum : " + SesObje["Status"]);
+                    treeView1.Nodes[0].Nodes[11].Nodes.Add("____________________________________________________________");
                 }
 
+                ManagementObjectSearcher BiosBilgileri = new ManagementObjectSearcher("select * from Win32_BIOS"); //bios bilgileri
+                foreach (ManagementObject BiosObje in BiosBilgileri.Get())
+                {
+                    treeView1.Nodes[1].Nodes.Add("İsim : " + BiosObje["Name"]);
+                    treeView1.Nodes[1].Nodes.Add("Sürüm : " + BiosObje["Version"]);
+                    treeView1.Nodes[1].Nodes.Add("Altyazı : " + BiosObje["Caption"]);
+                    treeView1.Nodes[1].Nodes.Add("Açıklama : " + BiosObje["Description"]);
+                    treeView1.Nodes[1].Nodes.Add("Geçerli Dil : " + BiosObje["CurrentLanguage"]);
+                    treeView1.Nodes[1].Nodes.Add("Üretici Firma : " + BiosObje["Manufacturer"]);
+                    treeView1.Nodes[1].Nodes.Add("Birincil BİOS : " + BiosObje["PrimaryBIOS"]);
+                    treeView1.Nodes[1].Nodes.Add("Yayın Tarihi : " + BiosObje["ReleaseDate"]);
+                    treeView1.Nodes[1].Nodes.Add("Seri No : " + BiosObje["SerialNumber"]);
+                    treeView1.Nodes[1].Nodes.Add("SMBIOS Sürümü : " + BiosObje["SMBIOSBIOSVersion"]);
+                }
+
+                ManagementObjectSearcher KullaniciBilgileri = new ManagementObjectSearcher("select * from Win32_Account"); //kullanıcı bilgileri
+                foreach (ManagementObject KulObje in KullaniciBilgileri.Get())
+                {
+                    treeView1.Nodes[2].Nodes.Add("İsim : " + KulObje["Name"]);
+                    treeView1.Nodes[2].Nodes.Add("Altyazı : " + KulObje["Caption"]);
+                    treeView1.Nodes[2].Nodes.Add("Açıklama : " + KulObje["Description"]);
+                    treeView1.Nodes[2].Nodes.Add("Domain : " + KulObje["Domain"]);
+                    treeView1.Nodes[2].Nodes.Add("Yerel Hesap : " + KulObje["LocalAccount"]);
+                    treeView1.Nodes[2].Nodes.Add("____________________________________________________________");
+                }
+
+                ManagementObjectSearcher OSBilgileri = new ManagementObjectSearcher("select * from Win32_OperatingSystem"); //işletim bilgileri
+                foreach (ManagementObject OSObje in OSBilgileri.Get())
+                {
+                    treeView1.Nodes[3].Nodes.Add("Üretici Firma : " + OSObje["Manufacturer"]);
+                    treeView1.Nodes[3].Nodes.Add("Yapı Numarası : " + OSObje["BuildNumber"]);
+                    treeView1.Nodes[3].Nodes.Add("Altyazı : " + OSObje["Caption"]);
+                    treeView1.Nodes[3].Nodes.Add("Seri No : " + OSObje["SerialNumber"]);
+                    treeView1.Nodes[3].Nodes.Add("Sürüm : " + OSObje["Version"]);
+                    treeView1.Nodes[3].Nodes.Add("Kullanıcı Sayısı : " + OSObje["NumberOfUsers"]);
+                    treeView1.Nodes[3].Nodes.Add("Sistem Aygıtı: " + OSObje["SystemDevice"]);
+                    treeView1.Nodes[3].Nodes.Add("Sistem Dizini : " + OSObje["SystemDirectory"]);
+                    treeView1.Nodes[3].Nodes.Add("Windows Dizini : " + OSObje["WindowsDirectory"]);
+                }
             }
             catch (Exception)
             {
                 throw;
             }
-           
+
         }
     }
 }

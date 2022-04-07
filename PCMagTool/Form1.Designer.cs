@@ -35,13 +35,14 @@ namespace PCMagTool
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Batarya", 12, 12);
             System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("CPU", 2, 2);
             System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Depolama", 8, 8);
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Fan", 13, 13);
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("GPU", 3, 3);
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Klavye", 14, 14);
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Optik Sürücü", 15, 15);
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("RAM", 4, 4);
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Ses", 9, 9);
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Bilgisayar", 1, 1, new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Ekran", 16, 16);
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Fan", 13, 13);
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("GPU", 3, 3);
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Klavye", 14, 14);
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Optik Sürücü", 15, 15);
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("RAM", 4, 4);
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Ses", 9, 9);
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Bilgisayar", 1, 1, new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2,
             treeNode3,
@@ -52,10 +53,11 @@ namespace PCMagTool
             treeNode8,
             treeNode9,
             treeNode10,
-            treeNode11});
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Bios", 7, 7);
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Kullanıcı", 11, 11);
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("İşletim Sistemi", 5, 5);
+            treeNode11,
+            treeNode12});
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Bios", 7, 7);
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Kullanıcılar", 11, 11);
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("İşletim Sistemi", 5, 5);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.label_ustbaslik = new System.Windows.Forms.Label();
@@ -201,51 +203,55 @@ namespace PCMagTool
             treeNode5.Name = "altdugum_depolama";
             treeNode5.SelectedImageIndex = 8;
             treeNode5.Text = "Depolama";
-            treeNode6.ImageIndex = 13;
-            treeNode6.Name = "altdugum_fan";
-            treeNode6.SelectedImageIndex = 13;
-            treeNode6.Text = "Fan";
-            treeNode7.ImageIndex = 3;
-            treeNode7.Name = "altdugum_ekran";
-            treeNode7.SelectedImageIndex = 3;
-            treeNode7.Text = "GPU";
-            treeNode8.ImageIndex = 14;
-            treeNode8.Name = "altdugum_klavye";
-            treeNode8.SelectedImageIndex = 14;
-            treeNode8.Text = "Klavye";
-            treeNode9.ImageIndex = 15;
-            treeNode9.Name = "altdugum_suruculer";
-            treeNode9.SelectedImageIndex = 15;
-            treeNode9.Text = "Optik Sürücü";
-            treeNode10.ImageIndex = 4;
-            treeNode10.Name = "altdugum_ram";
-            treeNode10.SelectedImageIndex = 4;
-            treeNode10.Text = "RAM";
-            treeNode11.ImageIndex = 9;
-            treeNode11.Name = "altdugum_ses";
-            treeNode11.SelectedImageIndex = 9;
-            treeNode11.Text = "Ses";
-            treeNode12.ImageIndex = 1;
-            treeNode12.Name = "kokdugum_bilgisayar";
-            treeNode12.SelectedImageIndex = 1;
-            treeNode12.Text = "Bilgisayar";
-            treeNode13.ImageIndex = 7;
-            treeNode13.Name = "kokdugum_bios";
-            treeNode13.SelectedImageIndex = 7;
-            treeNode13.Text = "Bios";
-            treeNode14.ImageIndex = 11;
-            treeNode14.Name = "kokdugum_kullanici";
-            treeNode14.SelectedImageIndex = 11;
-            treeNode14.Text = "Kullanıcı";
-            treeNode15.ImageIndex = 5;
-            treeNode15.Name = "kokdugum_isletimsistemi";
-            treeNode15.SelectedImageIndex = 5;
-            treeNode15.Text = "İşletim Sistemi";
+            treeNode6.ImageIndex = 16;
+            treeNode6.Name = "altdugum_ekran";
+            treeNode6.SelectedImageIndex = 16;
+            treeNode6.Text = "Ekran";
+            treeNode7.ImageIndex = 13;
+            treeNode7.Name = "altdugum_fan";
+            treeNode7.SelectedImageIndex = 13;
+            treeNode7.Text = "Fan";
+            treeNode8.ImageIndex = 3;
+            treeNode8.Name = "altdugum_ekran";
+            treeNode8.SelectedImageIndex = 3;
+            treeNode8.Text = "GPU";
+            treeNode9.ImageIndex = 14;
+            treeNode9.Name = "altdugum_klavye";
+            treeNode9.SelectedImageIndex = 14;
+            treeNode9.Text = "Klavye";
+            treeNode10.ImageIndex = 15;
+            treeNode10.Name = "altdugum_suruculer";
+            treeNode10.SelectedImageIndex = 15;
+            treeNode10.Text = "Optik Sürücü";
+            treeNode11.ImageIndex = 4;
+            treeNode11.Name = "altdugum_ram";
+            treeNode11.SelectedImageIndex = 4;
+            treeNode11.Text = "RAM";
+            treeNode12.ImageIndex = 9;
+            treeNode12.Name = "altdugum_ses";
+            treeNode12.SelectedImageIndex = 9;
+            treeNode12.Text = "Ses";
+            treeNode13.ImageIndex = 1;
+            treeNode13.Name = "kokdugum_bilgisayar";
+            treeNode13.SelectedImageIndex = 1;
+            treeNode13.Text = "Bilgisayar";
+            treeNode14.ImageIndex = 7;
+            treeNode14.Name = "kokdugum_bios";
+            treeNode14.SelectedImageIndex = 7;
+            treeNode14.Text = "Bios";
+            treeNode15.ImageIndex = 11;
+            treeNode15.Name = "kokdugum_kullanici";
+            treeNode15.SelectedImageIndex = 11;
+            treeNode15.Text = "Kullanıcılar";
+            treeNode16.ImageIndex = 5;
+            treeNode16.Name = "kokdugum_isletimsistemi";
+            treeNode16.SelectedImageIndex = 5;
+            treeNode16.Text = "İşletim Sistemi";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode12,
             treeNode13,
             treeNode14,
-            treeNode15});
+            treeNode15,
+            treeNode16});
             this.treeView1.SelectedImageIndex = 10;
             this.treeView1.Size = new System.Drawing.Size(713, 550);
             this.treeView1.TabIndex = 1;
@@ -271,6 +277,7 @@ namespace PCMagTool
             this.ımageList1.Images.SetKeyName(13, "fan.png");
             this.ımageList1.Images.SetKeyName(14, "klavye.png");
             this.ımageList1.Images.SetKeyName(15, "optik.png");
+            this.ımageList1.Images.SetKeyName(16, "ekran.png");
             // 
             // tabPage_donanim
             // 
