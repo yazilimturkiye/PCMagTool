@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="bin\Debug\net5.0-windows\images\gecerli.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net5.0-windows\images\hata.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="bin\Debug\net5.0-windows\images\optik.png" />
   </ItemGroup>
 

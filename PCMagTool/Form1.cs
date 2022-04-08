@@ -28,7 +28,7 @@ namespace PCMagTool
         {
             try
             {
-                ManagementObjectSearcher AgBilgileri = new ManagementObjectSearcher("select * from Win32_NetworkAdapter"); //Ag bilgileri
+                ManagementObjectSearcher AgBilgileri = new ManagementObjectSearcher("select * from Win32_NetworkAdapter"); //Ag bilgileri.
                 foreach (ManagementObject AgObje in AgBilgileri.Get())
                 {
                     treeView1.Nodes[0].Nodes[0].Nodes.Add("İsim : " + AgObje["Name"]);
@@ -52,7 +52,7 @@ namespace PCMagTool
                     treeView1.Nodes[0].Nodes[0].Nodes.Add("____________________________________________________________");
                 }
 
-                ManagementObjectSearcher AnaKartBilgileri = new ManagementObjectSearcher("select * from Win32_BaseBoard"); //Ana Kart bilgileri
+                ManagementObjectSearcher AnaKartBilgileri = new ManagementObjectSearcher("select * from Win32_BaseBoard"); //Ana Kart bilgileri.
                 foreach (ManagementObject AnaKartObje in AnaKartBilgileri.Get())
                 {
                     treeView1.Nodes[0].Nodes[1].Nodes.Add("Üretici firma : " + AnaKartObje["Manufacturer"]);
@@ -70,7 +70,7 @@ namespace PCMagTool
                     treeView1.Nodes[0].Nodes[1].Nodes.Add("Değiştirilebilir : " + AnaKartObje["Replaceable"]);
                 }
 
-                ManagementObjectSearcher BataryaBilgileri = new ManagementObjectSearcher("select * from Win32_Battery"); //Batarya bilgileri
+                ManagementObjectSearcher BataryaBilgileri = new ManagementObjectSearcher("select * from Win32_Battery"); //Batarya bilgileri.
                 foreach (ManagementObject BataryaObje in BataryaBilgileri.Get())
                 {
                     treeView1.Nodes[0].Nodes[2].Nodes.Add("İsim : " + BataryaObje["Name"]);
@@ -93,7 +93,7 @@ namespace PCMagTool
                     treeView1.Nodes[0].Nodes[2].Nodes.Add("Doldurma Süresi : " + BataryaObje["TimeToFullCharge"]);
                 }
 
-                ManagementObjectSearcher CPUBilgileri = new ManagementObjectSearcher("select * from Win32_Processor"); //cpu bilgileri
+                ManagementObjectSearcher CPUBilgileri = new ManagementObjectSearcher("select * from Win32_Processor"); //cpu bilgileri.
                 foreach (ManagementObject CPUObje in CPUBilgileri.Get())
                 {
                     treeView1.Nodes[0].Nodes[3].Nodes.Add("Model : " + CPUObje["Name"]);
@@ -108,7 +108,7 @@ namespace PCMagTool
                     treeView1.Nodes[0].Nodes[3].Nodes.Add("VM İzleme Modu Uzantıları : " + CPUObje["VMMonitorModeExtensions"]);
                 }
 
-                ManagementObjectSearcher DiskBilgileri = new ManagementObjectSearcher("select * from Win32_DiskDrive"); //disk bilgileri
+                ManagementObjectSearcher DiskBilgileri = new ManagementObjectSearcher("select * from Win32_DiskDrive"); //disk bilgileri.
                 foreach (ManagementObject DiskObje in DiskBilgileri.Get())
                 {
                     treeView1.Nodes[0].Nodes[4].Nodes.Add("İsim : " + DiskObje["Name"]);
@@ -149,7 +149,7 @@ namespace PCMagTool
 
                 }
 
-                ManagementObjectSearcher EkranBilgileri = new ManagementObjectSearcher("select * from Win32_DesktopMonitor"); //ekran bilgileri
+                ManagementObjectSearcher EkranBilgileri = new ManagementObjectSearcher("select * from Win32_DesktopMonitor"); //ekran bilgileri.
                 foreach (ManagementObject EkranObje in EkranBilgileri.Get())
                 {
                     treeView1.Nodes[0].Nodes[5].Nodes.Add("İsim : " + EkranObje["Name"]);
@@ -166,7 +166,7 @@ namespace PCMagTool
                     treeView1.Nodes[0].Nodes[5].Nodes.Add("Durum : " + EkranObje["Status"]);
                 }
 
-                ManagementObjectSearcher FanBilgileri = new ManagementObjectSearcher("select * from Win32_Fan"); //fan bilgileri
+                ManagementObjectSearcher FanBilgileri = new ManagementObjectSearcher("select * from Win32_Fan"); //fan bilgileri.
                 foreach (ManagementObject FanObje in FanBilgileri.Get())
                 {
                     treeView1.Nodes[0].Nodes[6].Nodes.Add("İsim : " + FanObje["Name"]);
@@ -180,7 +180,7 @@ namespace PCMagTool
                     treeView1.Nodes[0].Nodes[6].Nodes.Add("____________________________________________________________");
                 }
 
-                ManagementObjectSearcher GPUBilgileri = new ManagementObjectSearcher("select * from Win32_VideoController"); //gpu bilgileri
+                ManagementObjectSearcher GPUBilgileri = new ManagementObjectSearcher("select * from Win32_VideoController"); //gpu bilgileri.
                 foreach (ManagementObject GPUObje in GPUBilgileri.Get())
                 {
 
@@ -200,7 +200,7 @@ namespace PCMagTool
                     treeView1.Nodes[0].Nodes[7].Nodes.Add("____________________________________________________________");
                 }
 
-                ManagementObjectSearcher KlavyeBilgileri = new ManagementObjectSearcher("select * from Win32_Keyboard"); //klavye bilgileri
+                ManagementObjectSearcher KlavyeBilgileri = new ManagementObjectSearcher("select * from Win32_Keyboard"); //klavye bilgileri.
                 foreach (ManagementObject KlavyeObje in KlavyeBilgileri.Get())
                 {
                     treeView1.Nodes[0].Nodes[8].Nodes.Add("İsim : " + KlavyeObje["Name"]);
@@ -213,7 +213,7 @@ namespace PCMagTool
                     treeView1.Nodes[0].Nodes[8].Nodes.Add("____________________________________________________________");
                 }
 
-                ManagementObjectSearcher DVDBilgileri = new ManagementObjectSearcher("select * from Win32_CDROMDrive"); //dvd rom bilgileri
+                ManagementObjectSearcher DVDBilgileri = new ManagementObjectSearcher("select * from Win32_CDROMDrive"); //dvd rom bilgileri.
                 foreach (ManagementObject DVDObje in DVDBilgileri.Get())
                 {
                     treeView1.Nodes[0].Nodes[9].Nodes.Add("İsim : " + DVDObje["Name"]);
@@ -228,13 +228,13 @@ namespace PCMagTool
                     treeView1.Nodes[0].Nodes[9].Nodes.Add("____________________________________________________________");
                 }
 
-                ManagementObjectSearcher RAMBilgileri = new ManagementObjectSearcher("select * from Win32_MemoryDevice"); //ram bilgileri
+                ManagementObjectSearcher RAMBilgileri = new ManagementObjectSearcher("select * from Win32_MemoryDevice"); //ram bilgileri.
                 foreach (ManagementObject RAMObje in RAMBilgileri.Get())
                 {
                     treeView1.Nodes[0].Nodes[10].Nodes.Add("Model : " + RAMObje["DeviceID"]);
                 }
 
-                ManagementObjectSearcher RAMBoyutu = new ManagementObjectSearcher("select * from Win32_OperatingSystem"); //ram boyutu
+                ManagementObjectSearcher RAMBoyutu = new ManagementObjectSearcher("select * from Win32_OperatingSystem"); //ram boyutu.
                 foreach (ManagementObject RAMObje2 in RAMBoyutu.Get())
                 {
                     treeView1.Nodes[0].Nodes[10].Nodes.Add("Toplam Görünen Bellek : " + RAMObje2["TotalVisibleMemorySize"] + " KB");
@@ -243,7 +243,7 @@ namespace PCMagTool
                     treeView1.Nodes[0].Nodes[10].Nodes.Add("Boştaki Sanal Bellek : " + RAMObje2["FreeVirtualMemory"] + " KB");
                 }
 
-                ManagementObjectSearcher SesBilgileri = new ManagementObjectSearcher("select * from Win32_SoundDevice"); //ses bilgileri
+                ManagementObjectSearcher SesBilgileri = new ManagementObjectSearcher("select * from Win32_SoundDevice"); //ses bilgileri.
                 foreach (ManagementObject SesObje in SesBilgileri.Get())
                 {
                     treeView1.Nodes[0].Nodes[11].Nodes.Add("İsim : " + SesObje["Name"]);
@@ -256,7 +256,7 @@ namespace PCMagTool
                     treeView1.Nodes[0].Nodes[11].Nodes.Add("____________________________________________________________");
                 }
 
-                ManagementObjectSearcher BiosBilgileri = new ManagementObjectSearcher("select * from Win32_BIOS"); //bios bilgileri
+                ManagementObjectSearcher BiosBilgileri = new ManagementObjectSearcher("select * from Win32_BIOS"); //bios bilgileri.
                 foreach (ManagementObject BiosObje in BiosBilgileri.Get())
                 {
                     treeView1.Nodes[1].Nodes.Add("İsim : " + BiosObje["Name"]);
@@ -271,7 +271,7 @@ namespace PCMagTool
                     treeView1.Nodes[1].Nodes.Add("SMBIOS Sürümü : " + BiosObje["SMBIOSBIOSVersion"]);
                 }
 
-                ManagementObjectSearcher KullaniciBilgileri = new ManagementObjectSearcher("select * from Win32_Account"); //kullanıcı bilgileri
+                ManagementObjectSearcher KullaniciBilgileri = new ManagementObjectSearcher("select * from Win32_Account"); //kullanıcı bilgileri.
                 foreach (ManagementObject KulObje in KullaniciBilgileri.Get())
                 {
                     treeView1.Nodes[2].Nodes.Add("İsim : " + KulObje["Name"]);
@@ -282,7 +282,7 @@ namespace PCMagTool
                     treeView1.Nodes[2].Nodes.Add("____________________________________________________________");
                 }
 
-                ManagementObjectSearcher OSBilgileri = new ManagementObjectSearcher("select * from Win32_OperatingSystem"); //işletim bilgileri
+                ManagementObjectSearcher OSBilgileri = new ManagementObjectSearcher("select * from Win32_OperatingSystem"); //işletim bilgileri.
                 foreach (ManagementObject OSObje in OSBilgileri.Get())
                 {
                     treeView1.Nodes[3].Nodes.Add("Üretici Firma : " + OSObje["Manufacturer"]);
@@ -295,10 +295,56 @@ namespace PCMagTool
                     treeView1.Nodes[3].Nodes.Add("Sistem Dizini : " + OSObje["SystemDirectory"]);
                     treeView1.Nodes[3].Nodes.Add("Windows Dizini : " + OSObje["WindowsDirectory"]);
                 }
+
+                treeView1.Nodes[0].Expand();
             }
             catch (Exception)
             {
-                throw;
+                pictureBox_hata.Visible = true;
+                label_hata.Visible = true;
+            }
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) //Sağ alt linklabel.
+        {
+            Process sayfa_ac = new Process();
+            sayfa_ac.StartInfo.UseShellExecute = true;
+            sayfa_ac.StartInfo.FileName = "https://www.yazilimturkiye.com/";
+            sayfa_ac.Start();
+        }
+
+        private void button_DisariAktar_Click(object sender, EventArgs e) //Treeview içeriğini dışarı aktarma.
+        {
+            try
+            {
+                void TXTOlustur() //Treview içindeki veriyi aşağıdaki konumu dışarı aktaran kod bloğu.
+                {
+                    System.Text.StringBuilder buffer = new System.Text.StringBuilder();
+                    foreach (TreeNode rootNode in treeView1.Nodes)
+                        TreeViewOlustur(rootNode, buffer);
+                    System.IO.File.WriteAllText(@"C:\PCMagTool.txt", buffer.ToString());
+                }
+
+                void TreeViewOlustur(TreeNode rootNode, System.Text.StringBuilder buffer)
+                {
+                    buffer.Append(rootNode.Text);
+                    buffer.Append(Environment.NewLine);
+                    foreach (TreeNode childNode in rootNode.Nodes)
+                        TreeViewOlustur(childNode, buffer);
+                }
+                TXTOlustur();
+                pictureBox_hata.Visible = true;
+                label_hata.Visible = true;
+                pictureBox_hata.Image = Properties.Resources.gecerli;
+                label_hata.Text = "İşlem başarılı. Dosya konumu : 'C:/PCMagTool.txt'";
+            }
+            catch (Exception)
+            {
+                pictureBox_hata.Visible = true;
+                label_hata.Visible = true;
+                pictureBox_hata.Image = Properties.Resources.hata;
+                label_hata.Text = "İşlem başarısız. Uygulamanın yönetici olarak çalıştırıldığına emin olun.";
             }
 
         }

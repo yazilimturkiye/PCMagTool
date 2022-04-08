@@ -67,6 +67,8 @@ namespace PCMagTool
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_sistem = new System.Windows.Forms.TabPage();
+            this.button_DisariAktar = new System.Windows.Forms.Button();
+            this.button_genislet = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tabPage_donanim = new System.Windows.Forms.TabPage();
@@ -79,9 +81,13 @@ namespace PCMagTool
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.pictureBox_hata = new System.Windows.Forms.PictureBox();
+            this.label_hata = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage_sistem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_hata)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox_logo
@@ -163,6 +169,8 @@ namespace PCMagTool
             // tabPage_sistem
             // 
             this.tabPage_sistem.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_sistem.Controls.Add(this.button_DisariAktar);
+            this.tabPage_sistem.Controls.Add(this.button_genislet);
             this.tabPage_sistem.Controls.Add(this.treeView1);
             this.tabPage_sistem.Location = new System.Drawing.Point(4, 33);
             this.tabPage_sistem.Name = "tabPage_sistem";
@@ -170,6 +178,25 @@ namespace PCMagTool
             this.tabPage_sistem.Size = new System.Drawing.Size(707, 550);
             this.tabPage_sistem.TabIndex = 0;
             this.tabPage_sistem.Text = "Sistem";
+            // 
+            // button_DisariAktar
+            // 
+            this.button_DisariAktar.Location = new System.Drawing.Point(639, 62);
+            this.button_DisariAktar.Name = "button_DisariAktar";
+            this.button_DisariAktar.Size = new System.Drawing.Size(50, 50);
+            this.button_DisariAktar.TabIndex = 19;
+            this.button_DisariAktar.Text = "dış";
+            this.button_DisariAktar.UseVisualStyleBackColor = true;
+            this.button_DisariAktar.Click += new System.EventHandler(this.button_DisariAktar_Click);
+            // 
+            // button_genislet
+            // 
+            this.button_genislet.Location = new System.Drawing.Point(639, 6);
+            this.button_genislet.Name = "button_genislet";
+            this.button_genislet.Size = new System.Drawing.Size(50, 50);
+            this.button_genislet.TabIndex = 18;
+            this.button_genislet.Text = "ex";
+            this.button_genislet.UseVisualStyleBackColor = true;
             // 
             // treeView1
             // 
@@ -371,11 +398,52 @@ namespace PCMagTool
             this.button8.Text = "x";
             this.button8.UseVisualStyleBackColor = true;
             // 
+            // pictureBox_hata
+            // 
+            this.pictureBox_hata.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox_hata.Image = global::PCMagTool.Properties.Resources.hata;
+            this.pictureBox_hata.Location = new System.Drawing.Point(12, 736);
+            this.pictureBox_hata.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox_hata.Name = "pictureBox_hata";
+            this.pictureBox_hata.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox_hata.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_hata.TabIndex = 18;
+            this.pictureBox_hata.TabStop = false;
+            this.pictureBox_hata.Visible = false;
+            // 
+            // label_hata
+            // 
+            this.label_hata.AutoSize = true;
+            this.label_hata.BackColor = System.Drawing.SystemColors.Control;
+            this.label_hata.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_hata.Location = new System.Drawing.Point(34, 736);
+            this.label_hata.Name = "label_hata";
+            this.label_hata.Size = new System.Drawing.Size(214, 19);
+            this.label_hata.TabIndex = 19;
+            this.label_hata.Text = "Bazı sistem bilgileri çekilemedi.";
+            this.label_hata.Visible = false;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.linkLabel1.LinkColor = System.Drawing.Color.Gray;
+            this.linkLabel1.Location = new System.Drawing.Point(599, 738);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(126, 17);
+            this.linkLabel1.TabIndex = 20;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "yazilimturkiye.com";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 761);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.label_hata);
+            this.Controls.Add(this.pictureBox_hata);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -401,6 +469,7 @@ namespace PCMagTool
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage_sistem.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_hata)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,6 +497,11 @@ namespace PCMagTool
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.ImageList ımageList1;
+        private System.Windows.Forms.Button button_genislet;
+        private System.Windows.Forms.PictureBox pictureBox_hata;
+        private System.Windows.Forms.Label label_hata;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button button_DisariAktar;
     }
 }
 
