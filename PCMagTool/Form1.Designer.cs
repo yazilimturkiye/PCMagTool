@@ -72,6 +72,19 @@ namespace PCMagTool
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tabPage_donanim = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox_disk = new System.Windows.Forms.PictureBox();
+            this.pictureBox_ram = new System.Windows.Forms.PictureBox();
+            this.pictureBox_cpu = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label_diskyuzde = new System.Windows.Forms.Label();
+            this.progressBar_cpu = new System.Windows.Forms.ProgressBar();
+            this.progressBar_disk = new System.Windows.Forms.ProgressBar();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.progressBar_ram = new System.Windows.Forms.ProgressBar();
+            this.label_ramyuzde = new System.Windows.Forms.Label();
+            this.label_cpuyuzde = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -84,9 +97,15 @@ namespace PCMagTool
             this.pictureBox_hata = new System.Windows.Forms.PictureBox();
             this.label_hata = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage_sistem.SuspendLayout();
+            this.tabPage_donanim.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_disk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ram)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cpu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_hata)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,7 +187,7 @@ namespace PCMagTool
             // 
             // tabPage_sistem
             // 
-            this.tabPage_sistem.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_sistem.BackColor = System.Drawing.Color.White;
             this.tabPage_sistem.Controls.Add(this.button_DisariAktar);
             this.tabPage_sistem.Controls.Add(this.button_genislet);
             this.tabPage_sistem.Controls.Add(this.treeView1);
@@ -308,13 +327,140 @@ namespace PCMagTool
             // 
             // tabPage_donanim
             // 
-            this.tabPage_donanim.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_donanim.BackColor = System.Drawing.Color.White;
+            this.tabPage_donanim.Controls.Add(this.groupBox1);
             this.tabPage_donanim.Location = new System.Drawing.Point(4, 33);
             this.tabPage_donanim.Name = "tabPage_donanim";
             this.tabPage_donanim.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage_donanim.Size = new System.Drawing.Size(707, 550);
             this.tabPage_donanim.TabIndex = 1;
             this.tabPage_donanim.Text = "Donanım";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.pictureBox_disk);
+            this.groupBox1.Controls.Add(this.pictureBox_ram);
+            this.groupBox1.Controls.Add(this.pictureBox_cpu);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label_diskyuzde);
+            this.groupBox1.Controls.Add(this.progressBar_cpu);
+            this.groupBox1.Controls.Add(this.progressBar_disk);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.progressBar_ram);
+            this.groupBox1.Controls.Add(this.label_ramyuzde);
+            this.groupBox1.Controls.Add(this.label_cpuyuzde);
+            this.groupBox1.Location = new System.Drawing.Point(6, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(693, 157);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            // 
+            // pictureBox_disk
+            // 
+            this.pictureBox_disk.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_disk.Image = global::PCMagTool.Properties.Resources.hdd;
+            this.pictureBox_disk.Location = new System.Drawing.Point(15, 104);
+            this.pictureBox_disk.Name = "pictureBox_disk";
+            this.pictureBox_disk.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox_disk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_disk.TabIndex = 12;
+            this.pictureBox_disk.TabStop = false;
+            // 
+            // pictureBox_ram
+            // 
+            this.pictureBox_ram.Image = global::PCMagTool.Properties.Resources.ram;
+            this.pictureBox_ram.Location = new System.Drawing.Point(15, 70);
+            this.pictureBox_ram.Name = "pictureBox_ram";
+            this.pictureBox_ram.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox_ram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_ram.TabIndex = 11;
+            this.pictureBox_ram.TabStop = false;
+            // 
+            // pictureBox_cpu
+            // 
+            this.pictureBox_cpu.Image = global::PCMagTool.Properties.Resources.cpu;
+            this.pictureBox_cpu.Location = new System.Drawing.Point(15, 32);
+            this.pictureBox_cpu.Name = "pictureBox_cpu";
+            this.pictureBox_cpu.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox_cpu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_cpu.TabIndex = 10;
+            this.pictureBox_cpu.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(46, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Cpu";
+            // 
+            // label_diskyuzde
+            // 
+            this.label_diskyuzde.AutoSize = true;
+            this.label_diskyuzde.Location = new System.Drawing.Point(624, 113);
+            this.label_diskyuzde.Name = "label_diskyuzde";
+            this.label_diskyuzde.Size = new System.Drawing.Size(29, 20);
+            this.label_diskyuzde.TabIndex = 8;
+            this.label_diskyuzde.Text = "0%";
+            // 
+            // progressBar_cpu
+            // 
+            this.progressBar_cpu.Location = new System.Drawing.Point(93, 31);
+            this.progressBar_cpu.Name = "progressBar_cpu";
+            this.progressBar_cpu.Size = new System.Drawing.Size(525, 25);
+            this.progressBar_cpu.TabIndex = 1;
+            // 
+            // progressBar_disk
+            // 
+            this.progressBar_disk.Location = new System.Drawing.Point(93, 108);
+            this.progressBar_disk.Name = "progressBar_disk";
+            this.progressBar_disk.Size = new System.Drawing.Size(525, 25);
+            this.progressBar_disk.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(46, 69);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 20);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Ram";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(46, 108);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 20);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Disk";
+            // 
+            // progressBar_ram
+            // 
+            this.progressBar_ram.Location = new System.Drawing.Point(93, 69);
+            this.progressBar_ram.Name = "progressBar_ram";
+            this.progressBar_ram.Size = new System.Drawing.Size(525, 25);
+            this.progressBar_ram.TabIndex = 3;
+            // 
+            // label_ramyuzde
+            // 
+            this.label_ramyuzde.AutoSize = true;
+            this.label_ramyuzde.Location = new System.Drawing.Point(624, 74);
+            this.label_ramyuzde.Name = "label_ramyuzde";
+            this.label_ramyuzde.Size = new System.Drawing.Size(29, 20);
+            this.label_ramyuzde.TabIndex = 5;
+            this.label_ramyuzde.Text = "0%";
+            // 
+            // label_cpuyuzde
+            // 
+            this.label_cpuyuzde.AutoSize = true;
+            this.label_cpuyuzde.Location = new System.Drawing.Point(624, 36);
+            this.label_cpuyuzde.Name = "label_cpuyuzde";
+            this.label_cpuyuzde.Size = new System.Drawing.Size(29, 20);
+            this.label_cpuyuzde.TabIndex = 4;
+            this.label_cpuyuzde.Text = "0%";
             // 
             // tabPage3
             // 
@@ -436,6 +582,12 @@ namespace PCMagTool
             this.linkLabel1.Text = "yazilimturkiye.com";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -469,6 +621,12 @@ namespace PCMagTool
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage_sistem.ResumeLayout(false);
+            this.tabPage_donanim.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_disk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ram)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cpu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_hata)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -502,6 +660,20 @@ namespace PCMagTool
         private System.Windows.Forms.Label label_hata;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button button_DisariAktar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ProgressBar progressBar_ram;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ProgressBar progressBar_cpu;
+        private System.Windows.Forms.Label label_ramyuzde;
+        private System.Windows.Forms.Label label_cpuyuzde;
+        private System.Windows.Forms.Label label_diskyuzde;
+        private System.Windows.Forms.ProgressBar progressBar_disk;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox pictureBox_disk;
+        private System.Windows.Forms.PictureBox pictureBox_ram;
+        private System.Windows.Forms.PictureBox pictureBox_cpu;
     }
 }
 

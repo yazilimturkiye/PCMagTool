@@ -24,6 +24,11 @@ namespace PCMagTool
             InitializeComponent();
         }
 
+        PerformanceCounter performansCPU = new PerformanceCounter("Processor", "% Processor Time", "_Total");
+        PerformanceCounter performansRAM = new PerformanceCounter("Memory", "% Committed Bytes In Use"); //Available MBytes
+        PerformanceCounter performansDisk = new PerformanceCounter("PhysicalDisk","% Disk Time","_Total" );
+        PerformanceCounter performanceSystem = new PerformanceCounter("System", "System Up Time");
+
         private void Form1_Load(object sender, EventArgs e)
         {
             try
@@ -295,15 +300,14 @@ namespace PCMagTool
                     treeView1.Nodes[3].Nodes.Add("Sistem Dizini : " + OSObje["SystemDirectory"]);
                     treeView1.Nodes[3].Nodes.Add("Windows Dizini : " + OSObje["WindowsDirectory"]);
                 }
-
                 treeView1.Nodes[0].Expand();
+                timer1.Start();
             }
             catch (Exception)
             {
                 pictureBox_hata.Visible = true;
                 label_hata.Visible = true;
             }
-
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) //Sağ alt linklabel.
@@ -346,6 +350,20 @@ namespace PCMagTool
                 pictureBox_hata.Image = Properties.Resources.hata;
                 label_hata.Text = "İşlem başarısız. Uygulamanın yönetici olarak çalıştırıldığına emin olun.";
             }
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            float fcpu = performansCPU.NextValue();
+            float fram = performansRAM.NextValue();
+            float fdisk = performansDisk.NextValue();
+            progressBar_cpu.Value = (int)fcpu;
+            progressBar_ram.Value = (int)fram;
+            progressBar_disk.Value =(int)fdisk;
+            label_diskyuzde.Text = string.Format("{0:0.00}%", fdisk);
+            label_cpuyuzde.Text = string.Format("{0:0.00}%", fcpu);
+            label_ramyuzde.Text = string.Format("{0:0.00}%", fram);
 
         }
     }
