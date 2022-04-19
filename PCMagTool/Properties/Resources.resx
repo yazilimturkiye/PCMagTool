@@ -136,11 +136,20 @@
   <data name="cpu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net5.0-windows\images\cpu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="daralt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\net5.0-windows\images\daralt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ekran" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\net5.0-windows\images\ekran.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net5.0-windows\images\fan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gecerli" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net5.0-windows\images\gecerli.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="genislet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\net5.0-windows\images\genislet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gpu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net5.0-windows\images\gpu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -150,6 +159,9 @@
   </data>
   <data name="hdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net5.0-windows\images\hdd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="indir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\net5.0-windows\images\indir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kapat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net5.0-windows\images\kapat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,8 +178,8 @@
   <data name="optik" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net5.0-windows\images\optik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pcmagtool_fw" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\net5.0-windows\images\pcmagtool.fw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pcmagtool_logo_fw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\net5.0-windows\images\pcmagtool_logo.fw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ram" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net5.0-windows\images\ram.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

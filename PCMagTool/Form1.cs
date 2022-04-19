@@ -27,7 +27,7 @@ namespace PCMagTool
         PerformanceCounter performansCPU = new PerformanceCounter("Processor", "% Processor Time", "_Total");
         PerformanceCounter performansRAM = new PerformanceCounter("Memory", "% Committed Bytes In Use"); //Available MBytes
         PerformanceCounter performansDisk = new PerformanceCounter("PhysicalDisk","% Disk Time","_Total" );
-        PerformanceCounter performanceSystem = new PerformanceCounter("System", "System Up Time");
+        PerformanceCounter performansSistem = new PerformanceCounter("System", "System Up Time");
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -151,7 +151,6 @@ namespace PCMagTool
                     treeView1.Nodes[0].Nodes[4].Nodes.Add("SCSI Hedef Kimlik : " + DiskObje["SCSITargetId"]);
                     treeView1.Nodes[0].Nodes[4].Nodes.Add("Parça Başına Sektör : " + DiskObje["SectorsPerTrack"]);
                     treeView1.Nodes[0].Nodes[4].Nodes.Add("____________________________________________________________");
-
                 }
 
                 ManagementObjectSearcher EkranBilgileri = new ManagementObjectSearcher("select * from Win32_DesktopMonitor"); //ekran bilgileri.
@@ -300,8 +299,55 @@ namespace PCMagTool
                     treeView1.Nodes[3].Nodes.Add("Sistem Dizini : " + OSObje["SystemDirectory"]);
                     treeView1.Nodes[3].Nodes.Add("Windows Dizini : " + OSObje["WindowsDirectory"]);
                 }
-                treeView1.Nodes[0].Expand();
-                timer1.Start();
+                treeView1.Nodes[0].Expand(); //treeview1 sadece sıfırıncı dalı genişlet.
+
+                timer1.Start(); //performans değerleri için gerekli olan timer.
+                timer2.Stop();
+
+                string hostName = Dns.GetHostName(); //hostname çekme.
+                label_hostname.Text = hostName;
+
+                string IP = Dns.GetHostEntry(hostName).AddressList[1].ToString(); ; //IP çekme.
+                label_ipadresi.Text = IP;
+
+                String macadress = string.Empty; //mac adresi.
+                string mac = null;
+                foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
+                {
+                    OperationalStatus ot = nic.OperationalStatus;
+                    if (nic.OperationalStatus == OperationalStatus.Up)
+                    {
+                        macadress = nic.GetPhysicalAddress().ToString();
+                        break;
+                    }
+                }
+                for (int i = 0; i <= macadress.Length - 1; i++)
+                {
+                    mac = mac + ":" + macadress.Substring(i, 2);
+
+                    i++;
+                }
+                mac = mac.Remove(0, 1);
+                label_mac.Text = mac;
+
+                ManagementObjectSearcher lisansara = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM SoftwareLicensingProduct WHERE PartialProductKey <> null AND ApplicationId='55c92734-d682-4d71-983e-d6ec3f16059f' AND LicenseIsAddon=False"); //lisans Kontrolü.
+                foreach (ManagementObject lisansObje in lisansara.Get())
+                {
+                    label_lisans.Text = lisansObje["LicenseStatus"].ToString();
+                    label_urunanahtari.Text = lisansObje["ProductKeyID"].ToString();
+                    if (label_lisans.Text == "1")
+                    {
+                        label_lisans.Text = "Windows Etkin";
+                        pictureBox_lisans.Image = Properties.Resources.gecerli;
+                    }
+                    else
+                    {
+                        label_lisans.Text = "Windows Etkinleştirilmemiş";
+                        pictureBox_lisans.Image = Properties.Resources.hata;
+                    }
+                }
+
+                label9.Text = System.Environment.OSVersion.ToString();
             }
             catch (Exception)
             {
@@ -320,42 +366,50 @@ namespace PCMagTool
 
         private void button_DisariAktar_Click(object sender, EventArgs e) //Treeview içeriğini dışarı aktarma.
         {
-            try
+            timer2.Start(); //her işlem sonrası üst bardaki ilerleyen progressbar için gerekli timer.
+            if (progressBar_islem.Value == 100)
             {
-                void TXTOlustur() //Treview içindeki veriyi aşağıdaki konumu dışarı aktaran kod bloğu.
+                try
                 {
-                    System.Text.StringBuilder buffer = new System.Text.StringBuilder();
-                    foreach (TreeNode rootNode in treeView1.Nodes)
-                        TreeViewOlustur(rootNode, buffer);
-                    System.IO.File.WriteAllText(@"C:\PCMagTool.txt", buffer.ToString());
-                }
+                    void TXTOlustur() //Treview içindeki veriyi aşağıdaki konumu dışarı aktaran kod bloğu.
+                    {
+                        System.Text.StringBuilder buffer = new System.Text.StringBuilder();
+                        foreach (TreeNode rootNode in treeView1.Nodes)
+                            TreeViewOlustur(rootNode, buffer);
+                        System.IO.File.WriteAllText(@"C:\PCMagTool.txt", buffer.ToString());
+                    }
 
-                void TreeViewOlustur(TreeNode rootNode, System.Text.StringBuilder buffer)
-                {
-                    buffer.Append(rootNode.Text);
-                    buffer.Append(Environment.NewLine);
-                    foreach (TreeNode childNode in rootNode.Nodes)
-                        TreeViewOlustur(childNode, buffer);
+                    void TreeViewOlustur(TreeNode rootNode, System.Text.StringBuilder buffer)
+                    {
+                        buffer.Append(rootNode.Text);
+                        buffer.Append(Environment.NewLine);
+                        foreach (TreeNode childNode in rootNode.Nodes)
+                            TreeViewOlustur(childNode, buffer);
+                    }
+                    TXTOlustur();
+                    pictureBox_hata.Visible = true;
+                    label_hata.Visible = true;
+                    pictureBox_hata.Image = Properties.Resources.gecerli;
+                    label_hata.Text = "İşlem başarılı. Dosya konumu : 'C:/PCMagTool.txt'";
+                    timer2.Stop();
                 }
-                TXTOlustur();
-                pictureBox_hata.Visible = true;
-                label_hata.Visible = true;
-                pictureBox_hata.Image = Properties.Resources.gecerli;
-                label_hata.Text = "İşlem başarılı. Dosya konumu : 'C:/PCMagTool.txt'";
+                catch (Exception)
+                {
+                    pictureBox_hata.Visible = true;
+                    label_hata.Visible = true;
+                    pictureBox_hata.Image = Properties.Resources.hata;
+                    label_hata.Text = "İşlem başarısız. Uygulamanın yönetici olarak çalıştırıldığına emin olun.";
+                }
             }
-            catch (Exception)
+            else
             {
-                pictureBox_hata.Visible = true;
-                label_hata.Visible = true;
-                pictureBox_hata.Image = Properties.Resources.hata;
-                label_hata.Text = "İşlem başarısız. Uygulamanın yönetici olarak çalıştırıldığına emin olun.";
-            }
 
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            float fcpu = performansCPU.NextValue();
+            float fcpu = performansCPU.NextValue(); //Donanım sekmesindeki performans barlar.
             float fram = performansRAM.NextValue();
             float fdisk = performansDisk.NextValue();
             progressBar_cpu.Value = (int)fcpu;
@@ -365,6 +419,32 @@ namespace PCMagTool
             label_cpuyuzde.Text = string.Format("{0:0.00}%", fcpu);
             label_ramyuzde.Text = string.Format("{0:0.00}%", fram);
 
+            performansSistem.NextValue(); //PC Açık Kalma Süresi Hesaplama.
+            TimeSpan ts = TimeSpan.FromSeconds(performansSistem.NextValue());
+            label_acikliksure.Text = ts.Days.ToString() + ":" + ts.Hours.ToString() + ":" + ts.Minutes.ToString() + ":" + ts.Seconds.ToString();
+        }
+
+        private void button_genislet_Click(object sender, EventArgs e)
+        {
+            treeView1.ExpandAll(); //treeview1 dallarını genişlet.
+        }
+
+        private void timer2_Tick(object sender, EventArgs e) //timer2
+        {
+            if (progressBar_islem.Value == 100)
+            {
+                timer2.Stop();
+                progressBar_islem.Value = 0;
+            }
+            else
+            {
+                progressBar_islem.Value++;
+            }
+        }
+
+        private void button_daralt_Click(object sender, EventArgs e)
+        {
+            treeView1.CollapseAll(); //treeview1 dallarını daralt.
         }
     }
 }

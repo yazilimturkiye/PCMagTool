@@ -2,10 +2,42 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <Description>PC Management Tool v1.0</Description>
+    <ApplicationIcon>bin\Debug\net5.0-windows\images\pcmagtool.ico</ApplicationIcon>
+    <Company>YazilimTurkiye</Company>
+    <PackageIcon>pcmagtool_logo.fw.png</PackageIcon>
+    <RepositoryUrl>https://github.com/yazilimturkiye/PCMagTool</RepositoryUrl>
+    <PackageReleaseNotes>v1.0</PackageReleaseNotes>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\net5.0-windows\images\pcmagtool.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net5.0-windows\images\pcmagtool_logo.fw.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net5.0-windows\images\daralt.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net5.0-windows\images\genislet.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net5.0-windows\images\indir.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net5.0-windows\images\ekran.png" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="bin\Debug\net5.0-windows\images\gecerli.png" />

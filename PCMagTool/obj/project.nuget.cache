@@ -1,18 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "XqGVKZ04CPjo0bWTShYRhTjQIHU+Ch1H3i1vmFAq7JKyBNyTvFRx3e252LufUjrmy7/ExuexbzjJNcL4dAknbg==",
+  "dgSpecHash": "QTGqKqF0AUbhaTFbZtT4ti7e0gvm3/1qgS28wqvaErOqiB8jq/yUoN3jgyZZspd55gIYipG9tJF8zYYbCRiong==",
   "success": true,
   "projectFilePath": "C:\\Users\\Yılmaz Mert Çayır\\source\\repos\\PCMagTool\\PCMagTool\\PCMagTool.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.diagnostics.performancecounter\\6.0.1\\system.diagnostics.performancecounter.6.0.1.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512",
+    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": []

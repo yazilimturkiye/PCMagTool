@@ -123,6 +123,26 @@ namespace PCMagTool.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap daralt {
+            get {
+                object obj = ResourceManager.GetObject("daralt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap ekran {
+            get {
+                object obj = ResourceManager.GetObject("ekran", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap fan {
             get {
                 object obj = ResourceManager.GetObject("fan", resourceCulture);
@@ -136,6 +156,16 @@ namespace PCMagTool.Properties {
         internal static System.Drawing.Bitmap gecerli {
             get {
                 object obj = ResourceManager.GetObject("gecerli", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap genislet {
+            get {
+                object obj = ResourceManager.GetObject("genislet", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +196,16 @@ namespace PCMagTool.Properties {
         internal static System.Drawing.Bitmap hdd {
             get {
                 object obj = ResourceManager.GetObject("hdd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap indir {
+            get {
+                object obj = ResourceManager.GetObject("indir", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +263,9 @@ namespace PCMagTool.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap pcmagtool_fw {
+        internal static System.Drawing.Bitmap pcmagtool_logo_fw {
             get {
-                object obj = ResourceManager.GetObject("pcmagtool_fw", resourceCulture);
+                object obj = ResourceManager.GetObject("pcmagtool_logo_fw", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
