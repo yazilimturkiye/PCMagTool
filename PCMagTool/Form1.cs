@@ -330,24 +330,28 @@ namespace PCMagTool
                 mac = mac.Remove(0, 1);
                 label_mac.Text = mac;
 
-                ManagementObjectSearcher lisansara = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM SoftwareLicensingProduct WHERE PartialProductKey <> null AND ApplicationId='55c92734-d682-4d71-983e-d6ec3f16059f' AND LicenseIsAddon=False"); //lisans Kontrolü.
-                foreach (ManagementObject lisansObje in lisansara.Get())
+                label_bit.Text = System.Environment.Is64BitOperatingSystem.ToString(); //sistem türü.
+                
+                if (label_bit.Text == "True")
                 {
-                    label_lisans.Text = lisansObje["LicenseStatus"].ToString();
-                    label_urunanahtari.Text = lisansObje["ProductKeyID"].ToString();
-                    if (label_lisans.Text == "1")
-                    {
-                        label_lisans.Text = "Windows Etkin";
-                        pictureBox_lisans.Image = Properties.Resources.gecerli;
-                    }
-                    else
-                    {
-                        label_lisans.Text = "Windows Etkinleştirilmemiş";
-                        pictureBox_lisans.Image = Properties.Resources.hata;
-                    }
+                    label_bit.Text = "x64";
+                }
+                else
+                {
+                    label_bit.Text = "x86";
                 }
 
-                label9.Text = System.Environment.OSVersion.ToString();
+                label_isletimsistemi.Text = System.Environment.OSVersion.ToString(); //sistem versiyonu.
+
+                if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable()) //internet kontrolü.
+                {
+                    label_internet.Text = "Bağlantı Mevcut";
+                }
+                else
+                {
+                    label_internet.Text = "Bağlantı Başarısız";
+                }
+
             }
             catch (Exception)
             {
@@ -445,6 +449,21 @@ namespace PCMagTool
         private void button_daralt_Click(object sender, EventArgs e)
         {
             treeView1.CollapseAll(); //treeview1 dallarını daralt.
+        }
+
+        private void button_kopyaekle_Click(object sender, EventArgs e)
+        {
+            string kopyaekle;
+            kopyaekle = Clipboard.GetText();
+            if (kopyaekle == string.Empty)
+            {
+
+            }
+            else
+            {
+                listView1.Items.Add(kopyaekle);
+            }
+            
         }
     }
 }
