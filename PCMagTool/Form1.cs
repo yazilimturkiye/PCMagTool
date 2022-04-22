@@ -29,6 +29,15 @@ namespace PCMagTool
         PerformanceCounter performansDisk = new PerformanceCounter("PhysicalDisk","% Disk Time","_Total" );
         PerformanceCounter performansSistem = new PerformanceCounter("System", "System Up Time");
 
+        void islemler()
+        {
+            foreach (Process islem in Process.GetProcesses())
+            {
+                listView_islemler.Items.Add(islem.ProcessName);
+                listView_islemler.Items[0].SubItems.Add(islem.Id.ToString());
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             try
@@ -304,6 +313,8 @@ namespace PCMagTool
                 timer1.Start(); //performans değerleri için gerekli olan timer.
                 timer2.Stop();
 
+                islemler();
+
                 string hostName = Dns.GetHostName(); //hostname çekme.
                 label_hostname.Text = hostName;
 
@@ -351,7 +362,6 @@ namespace PCMagTool
                 {
                     label_internet.Text = "Bağlantı Başarısız";
                 }
-
             }
             catch (Exception)
             {
@@ -446,24 +456,37 @@ namespace PCMagTool
             }
         }
 
-        private void button_daralt_Click(object sender, EventArgs e)
+        private void button_daralt_Click(object sender, EventArgs e) //treeview1 dallarını daralt.
         {
-            treeView1.CollapseAll(); //treeview1 dallarını daralt.
+            treeView1.CollapseAll();
         }
 
-        private void button_kopyaekle_Click(object sender, EventArgs e)
+        private void button_kopyaekle_Click(object sender, EventArgs e) //listview'e kopyalanan öğeyi ekle.
         {
-            string kopyaekle;
-            kopyaekle = Clipboard.GetText();
-            if (kopyaekle == string.Empty)
+            string zaman = DateTime.Now.ToLongTimeString();
+            string kopyaekle = Clipboard.GetText();
+            if (kopyaekle == string.Empty & zaman == String.Empty)
             {
 
             }
             else
             {
-                listView1.Items.Add(kopyaekle);
+                string[] bilgiekle = {kopyaekle, zaman}; 
+                listView_kopya.Items.Add(new ListViewItem(bilgiekle));
             }
-            
+        }
+
+        private void button_kopyacikar_Click(object sender, EventArgs e) //listview'deki öğeti çıkart.
+        {
+            foreach (ListViewItem secilioge in listView_kopya.CheckedItems)
+            {
+            listView_kopya.Items.Remove(secilioge);
+            }
+        }
+
+        private void button_kopyatemizle_Click(object sender, EventArgs e) //listview'e ekli olan itemleri silme.
+        {
+            listView_kopya.Items.Clear(); 
         }
     }
 }

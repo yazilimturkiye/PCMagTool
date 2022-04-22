@@ -113,6 +113,16 @@ namespace PCMagTool.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap cikar {
+            get {
+                object obj = ResourceManager.GetObject("cikar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap cpu {
             get {
                 object obj = ResourceManager.GetObject("cpu", resourceCulture);
@@ -126,6 +136,16 @@ namespace PCMagTool.Properties {
         internal static System.Drawing.Bitmap daralt {
             get {
                 object obj = ResourceManager.GetObject("daralt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap ekle {
+            get {
+                object obj = ResourceManager.GetObject("ekle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
