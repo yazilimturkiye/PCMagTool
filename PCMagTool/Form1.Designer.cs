@@ -113,6 +113,7 @@ namespace PCMagTool
             this.listView_islemler = new System.Windows.Forms.ListView();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -746,19 +747,22 @@ namespace PCMagTool
             // 
             // button9
             // 
-            this.button9.BackgroundImage = global::PCMagTool.Properties.Resources.ekle;
             this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button9.Location = new System.Drawing.Point(6, 509);
+            this.button9.Location = new System.Drawing.Point(518, 509);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(35, 35);
+            this.button9.Size = new System.Drawing.Size(183, 35);
             this.button9.TabIndex = 22;
+            this.button9.Text = "Seçili Görevi Sonlandır";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // listView_islemler
             // 
             this.listView_islemler.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listView_islemler.FullRowSelect = true;
             this.listView_islemler.GridLines = true;
             this.listView_islemler.HideSelection = false;
             this.listView_islemler.Location = new System.Drawing.Point(0, 0);
@@ -771,11 +775,17 @@ namespace PCMagTool
             // columnHeader3
             // 
             this.columnHeader3.Text = "İşlem Adı";
-            this.columnHeader3.Width = 250;
+            this.columnHeader3.Width = 300;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "PID";
+            this.columnHeader4.Width = 100;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Açıklama";
+            this.columnHeader5.Width = 301;
             // 
             // button1
             // 
@@ -1019,6 +1029,7 @@ namespace PCMagTool
         private System.Windows.Forms.ListView listView_islemler;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }
 

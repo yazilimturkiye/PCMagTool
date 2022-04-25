@@ -29,12 +29,17 @@ namespace PCMagTool
         PerformanceCounter performansDisk = new PerformanceCounter("PhysicalDisk","% Disk Time","_Total" );
         PerformanceCounter performansSistem = new PerformanceCounter("System", "System Up Time");
 
-        void islemler()
+        Process[] islem = Process.GetProcesses();
+        public void islemler() //işlemler sekmesinde bulunan çalışan işlemleri gösteren kod bloğu.
         {
-            foreach (Process islem in Process.GetProcesses())
+            listView_islemler.Items.Clear();
+            foreach (Process islemitem in islem)
             {
-                listView_islemler.Items.Add(islem.ProcessName);
-                listView_islemler.Items[0].SubItems.Add(islem.Id.ToString());
+                string islemAdi = islemitem.ProcessName.ToString();
+                string islemPID = islemitem.Id.ToString();
+                string islemtest = islemitem.MainWindowTitle.ToString();
+                string[] islemleriEkle = { islemAdi, islemPID, islemtest };
+                listView_islemler.Items.Add(new ListViewItem(islemleriEkle));
             }
         }
 
@@ -436,6 +441,7 @@ namespace PCMagTool
             performansSistem.NextValue(); //PC Açık Kalma Süresi Hesaplama.
             TimeSpan ts = TimeSpan.FromSeconds(performansSistem.NextValue());
             label_acikliksure.Text = ts.Days.ToString() + ":" + ts.Hours.ToString() + ":" + ts.Minutes.ToString() + ":" + ts.Seconds.ToString();
+
         }
 
         private void button_genislet_Click(object sender, EventArgs e)
@@ -487,6 +493,20 @@ namespace PCMagTool
         private void button_kopyatemizle_Click(object sender, EventArgs e) //listview'e ekli olan itemleri silme.
         {
             listView_kopya.Items.Clear(); 
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process p = new Process();
+                p.Kill();
+            }
+            catch (Exception)
+            {
+                label_hata.Text = "Seçili görev sonlandırılamadı.";
+                pictureBox_hata.Image = Properties.Resources.hata;
+            }
         }
     }
 }
