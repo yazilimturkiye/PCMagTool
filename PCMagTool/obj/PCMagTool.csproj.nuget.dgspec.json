@@ -52,6 +52,10 @@
             "System.Management": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "System.ServiceProcess.ServiceController": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [

@@ -16,6 +16,7 @@
     <None Include="bin\Debug\net5.0-windows\images\cikar.png" />
     <None Include="bin\Debug\net5.0-windows\images\ekle.png" />
     <Content Include="bin\Debug\net5.0-windows\images\pcmagtool.ico" />
+    <None Include="bin\Debug\net5.0-windows\images\yenile.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -116,6 +117,7 @@
   <ItemGroup>
     <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="6.0.1" />
     <PackageReference Include="System.Management" Version="6.0.0" />
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>

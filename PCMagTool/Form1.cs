@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using System.Net;
-using System.Net.Sockets;
-using System.Net.NetworkInformation;
-using System.DirectoryServices.ActiveDirectory;
-using System.Management;
+using System.Net; //ağ sınıfı
+using System.Net.Sockets; //ağ soketi sınıfı
+using System.Net.NetworkInformation; //ağ sınıfı
+using System.DirectoryServices.ActiveDirectory; //activedirectory sınıfı
+using System.Management; //yönetim sınıfı
+using System.ServiceProcess; //servisler sınıfı
 
 namespace PCMagTool
 {
@@ -30,6 +31,8 @@ namespace PCMagTool
         PerformanceCounter performansSistem = new PerformanceCounter("System", "System Up Time");
 
         Process[] islem = Process.GetProcesses();
+        ServiceController[] hizmet = ServiceController.GetServices();
+
         public void islemler() //işlemler sekmesinde bulunan çalışan işlemleri gösteren kod bloğu.
         {
             listView_islemler.Items.Clear();
@@ -43,6 +46,18 @@ namespace PCMagTool
             }
         }
 
+        public void hizmetler() //hizmetler sekmesinde bulunan çalışan hizmetleri gösteren kod bloğu.
+        {
+            listView_hizmetler.Items.Clear();
+            foreach (ServiceController servisitem in hizmet)
+            {
+                string hizmetadi = servisitem.ServiceName;
+                string hizmetdurumu = servisitem.Status.ToString();
+                string hizmetaciklama = servisitem.DisplayName;
+                string[] hizmetleriEkle = { hizmetadi, hizmetdurumu, hizmetaciklama };
+                listView_hizmetler.Items.Add(new ListViewItem(hizmetleriEkle));
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             try
@@ -319,6 +334,7 @@ namespace PCMagTool
                 timer2.Stop();
 
                 islemler();
+                hizmetler();
 
                 string hostName = Dns.GetHostName(); //hostname çekme.
                 label_hostname.Text = hostName;
@@ -499,8 +515,14 @@ namespace PCMagTool
         {
             try
             {
-                Process p = new Process();
-                p.Kill();
+                Process[] islemsonlandir = null;
+                string islemadi = listView_islemler.SelectedItems[0].Text;
+                islemsonlandir = Process.GetProcessesByName(islemadi);
+                foreach (Process proces in islemsonlandir)
+                {
+                    proces.Kill();
+                }
+                islemler();
             }
             catch (Exception)
             {

@@ -67,6 +67,32 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "System.Diagnostics.EventLog/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.Registry": "5.0.0",
+          "System.Security.Principal.Windows": "5.0.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/System.Diagnostics.EventLog.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/System.Diagnostics.EventLog.dll": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.1/System.Diagnostics.EventLog.Messages.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          },
+          "runtimes/win/lib/netcoreapp3.1/System.Diagnostics.EventLog.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Diagnostics.PerformanceCounter/6.0.1": {
         "type": "package",
         "dependencies": {
@@ -223,6 +249,27 @@
           }
         }
       },
+      "System.ServiceProcess.ServiceController/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.EventLog": "6.0.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/System.ServiceProcess.ServiceController.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/System.ServiceProcess.ServiceController.dll": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.1/System.ServiceProcess.ServiceController.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Windows.Extensions/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -362,6 +409,37 @@
         "runtimes/win/lib/net461/System.Configuration.ConfigurationManager.xml",
         "system.configuration.configurationmanager.6.0.0.nupkg.sha512",
         "system.configuration.configurationmanager.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Diagnostics.EventLog/6.0.0": {
+      "sha512": "lcyUiXTsETK2ALsZrX+nWuHSIQeazhqPphLfaRxzdGaG93+0kELqpgEHtwWOlQe7+jSFnKwaCAgL4kjeZCQJnw==",
+      "type": "package",
+      "path": "system.diagnostics.eventlog/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Diagnostics.EventLog.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Diagnostics.EventLog.dll",
+        "lib/net461/System.Diagnostics.EventLog.xml",
+        "lib/net6.0/System.Diagnostics.EventLog.dll",
+        "lib/net6.0/System.Diagnostics.EventLog.xml",
+        "lib/netcoreapp3.1/System.Diagnostics.EventLog.dll",
+        "lib/netcoreapp3.1/System.Diagnostics.EventLog.xml",
+        "lib/netstandard2.0/System.Diagnostics.EventLog.dll",
+        "lib/netstandard2.0/System.Diagnostics.EventLog.xml",
+        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll",
+        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll",
+        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.Diagnostics.EventLog.Messages.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Diagnostics.EventLog.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Diagnostics.EventLog.xml",
+        "system.diagnostics.eventlog.6.0.0.nupkg.sha512",
+        "system.diagnostics.eventlog.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -632,6 +710,39 @@
         "version.txt"
       ]
     },
+    "System.ServiceProcess.ServiceController/6.0.0": {
+      "sha512": "qMBvG8ZFbkXoe0Z5/D7FAAadfPkH2v7vSuh2xsLf3U6jNoejpIdeV18A0htiASsLK1CCAc/p59kaLXlt2yB1gw==",
+      "type": "package",
+      "path": "system.serviceprocess.servicecontroller/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.ServiceProcess.ServiceController.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.ServiceProcess.ServiceController.dll",
+        "lib/net461/System.ServiceProcess.ServiceController.xml",
+        "lib/net6.0/System.ServiceProcess.ServiceController.dll",
+        "lib/net6.0/System.ServiceProcess.ServiceController.xml",
+        "lib/netcoreapp3.1/System.ServiceProcess.ServiceController.dll",
+        "lib/netcoreapp3.1/System.ServiceProcess.ServiceController.xml",
+        "lib/netstandard2.0/System.ServiceProcess.ServiceController.dll",
+        "lib/netstandard2.0/System.ServiceProcess.ServiceController.xml",
+        "runtimes/win/lib/net461/System.ServiceProcess.ServiceController.dll",
+        "runtimes/win/lib/net461/System.ServiceProcess.ServiceController.xml",
+        "runtimes/win/lib/net6.0/System.ServiceProcess.ServiceController.dll",
+        "runtimes/win/lib/net6.0/System.ServiceProcess.ServiceController.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.ServiceProcess.ServiceController.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.ServiceProcess.ServiceController.xml",
+        "runtimes/win/lib/netstandard2.0/System.ServiceProcess.ServiceController.dll",
+        "runtimes/win/lib/netstandard2.0/System.ServiceProcess.ServiceController.xml",
+        "system.serviceprocess.servicecontroller.6.0.0.nupkg.sha512",
+        "system.serviceprocess.servicecontroller.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Windows.Extensions/6.0.0": {
       "sha512": "IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "type": "package",
@@ -659,7 +770,8 @@
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
       "System.Diagnostics.PerformanceCounter >= 6.0.1",
-      "System.Management >= 6.0.0"
+      "System.Management >= 6.0.0",
+      "System.ServiceProcess.ServiceController >= 6.0.0"
     ]
   },
   "packageFolders": {
@@ -713,6 +825,10 @@
             "version": "[6.0.1, )"
           },
           "System.Management": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
+          "System.ServiceProcess.ServiceController": {
             "target": "Package",
             "version": "[6.0.0, )"
           }
