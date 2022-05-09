@@ -30,11 +30,9 @@ namespace PCMagTool
         PerformanceCounter performansDisk = new PerformanceCounter("PhysicalDisk","% Disk Time","_Total" );
         PerformanceCounter performansSistem = new PerformanceCounter("System", "System Up Time");
 
-        Process[] islem = Process.GetProcesses();
-        ServiceController[] hizmet = ServiceController.GetServices();
-
         public void islemler() //işlemler sekmesinde bulunan çalışan işlemleri gösteren kod bloğu.
         {
+            Process[] islem = Process.GetProcesses();
             listView_islemler.Items.Clear();
             foreach (Process islemitem in islem)
             {
@@ -48,6 +46,7 @@ namespace PCMagTool
 
         public void hizmetler() //hizmetler sekmesinde bulunan çalışan hizmetleri gösteren kod bloğu.
         {
+            ServiceController[] hizmet = ServiceController.GetServices();
             listView_hizmetler.Items.Clear();
             foreach (ServiceController servisitem in hizmet)
             {
@@ -398,7 +397,6 @@ namespace PCMagTool
             sayfa_ac.StartInfo.FileName = "https://www.yazilimturkiye.com/";
             sayfa_ac.Start();
         }
-
         private void button_DisariAktar_Click(object sender, EventArgs e) //Treeview içeriğini dışarı aktarma.
         {
             timer2.Start(); //her işlem sonrası üst bardaki ilerleyen progressbar için gerekli timer.
@@ -511,7 +509,7 @@ namespace PCMagTool
             listView_kopya.Items.Clear(); 
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void button_islemsonlandir_Click(object sender, EventArgs e) //islem sonlandırma.
         {
             try
             {
@@ -526,9 +524,80 @@ namespace PCMagTool
             }
             catch (Exception)
             {
+                pictureBox_hata.Visible = true;
+                label_hata.Visible = true;
                 label_hata.Text = "Seçili görev sonlandırılamadı.";
                 pictureBox_hata.Image = Properties.Resources.hata;
             }
+        }
+
+        private void button_islemleryenile_Click(object sender, EventArgs e) //islemler listesini yenileme.
+        {
+            islemler();
+        }
+
+        private void button_hizmetsonlandir_Click(object sender, EventArgs e) //hizmet sonlandırma.
+        {
+            try
+            {
+                string hizmetadi = listView_hizmetler.SelectedItems[0].Text;
+                ServiceController hizmet = new ServiceController(hizmetadi);
+                if ((hizmet.Status.Equals(ServiceControllerStatus.StartPending)) || (hizmet.Status.Equals(ServiceControllerStatus.Running)))
+                {
+                    hizmet.Stop();
+                    listView_hizmetler.Items.Clear();
+                    hizmetler();
+                }
+                else
+                {
+                    pictureBox_hata.Visible = true;
+                    label_hata.Visible = true;
+                    label_hata.Text = "Seçili hizmet zaten çalışmıyor.";
+                    pictureBox_hata.Image = Properties.Resources.hata;
+                }
+            }
+            catch (Exception)
+            {
+                pictureBox_hata.Visible = true;
+                label_hata.Visible = true;
+                label_hata.Text = "Hizmet durdurulamadı. PCMagTool'u yönetici olarak çalıştırın.";
+                pictureBox_hata.Image = Properties.Resources.hata;
+            }
+
+        }
+
+        private void button_hizmetbaslat_Click(object sender, EventArgs e) //hizmet başlatma.
+        {
+            try
+            {
+                string hizmetadi = listView_hizmetler.SelectedItems[0].Text;
+                ServiceController hizmet = new ServiceController(hizmetadi);
+                if ((hizmet.Status.Equals(ServiceControllerStatus.StopPending)) || (hizmet.Status.Equals(ServiceControllerStatus.Stopped)))
+                {
+                    hizmet.Start();
+                    listView_hizmetler.Items.Clear();
+                    hizmetler();
+                }
+                else
+                {
+                    pictureBox_hata.Visible = true;
+                    label_hata.Visible = true;
+                    label_hata.Text = "Seçili hizmet zaten çalışıyor.";
+                    pictureBox_hata.Image = Properties.Resources.hata;
+                }
+            }
+            catch (Exception)
+            {
+                pictureBox_hata.Visible = true;
+                label_hata.Visible = true;
+                label_hata.Text = "Hizmet başlatılamadı. PCMagTool'u yönetici olarak çalıştırın.";
+                pictureBox_hata.Image = Properties.Resources.hata;
+            }
+        }
+
+        private void button_hizmetyenile_Click(object sender, EventArgs e) //hizmetler listesini yenileme.
+        {
+            hizmetler();
         }
     }
 }

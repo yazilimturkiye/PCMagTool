@@ -109,15 +109,16 @@ namespace PCMagTool
             this.label_ramyuzde = new System.Windows.Forms.Label();
             this.label_cpuyuzde = new System.Windows.Forms.Label();
             this.tabPage_islemler = new System.Windows.Forms.TabPage();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.button_islemleryenile = new System.Windows.Forms.Button();
+            this.button_islemsonlandir = new System.Windows.Forms.Button();
             this.listView_islemler = new System.Windows.Forms.ListView();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.tabPage_hizmetler = new System.Windows.Forms.TabPage();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.button_hizmetbaslat = new System.Windows.Forms.Button();
+            this.button_hizmetyenile = new System.Windows.Forms.Button();
+            this.button_hizmetsonlandir = new System.Windows.Forms.Button();
             this.listView_hizmetler = new System.Windows.Forms.ListView();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
@@ -384,6 +385,7 @@ namespace PCMagTool
             this.ımageList1.Images.SetKeyName(15, "optik.png");
             this.ımageList1.Images.SetKeyName(16, "ekran.png");
             this.ımageList1.Images.SetKeyName(17, "kapat.png");
+            this.ımageList1.Images.SetKeyName(18, "onay.png");
             // 
             // tabPage_izleme
             // 
@@ -751,8 +753,8 @@ namespace PCMagTool
             // tabPage_islemler
             // 
             this.tabPage_islemler.BackColor = System.Drawing.Color.White;
-            this.tabPage_islemler.Controls.Add(this.button10);
-            this.tabPage_islemler.Controls.Add(this.button9);
+            this.tabPage_islemler.Controls.Add(this.button_islemleryenile);
+            this.tabPage_islemler.Controls.Add(this.button_islemsonlandir);
             this.tabPage_islemler.Controls.Add(this.listView_islemler);
             this.tabPage_islemler.Location = new System.Drawing.Point(4, 34);
             this.tabPage_islemler.Name = "tabPage_islemler";
@@ -761,30 +763,31 @@ namespace PCMagTool
             this.tabPage_islemler.TabIndex = 2;
             this.tabPage_islemler.Text = "İşlemler";
             // 
-            // button10
+            // button_islemleryenile
             // 
-            this.button10.BackgroundImage = global::PCMagTool.Properties.Resources.yenile;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button10.Location = new System.Drawing.Point(431, 509);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(35, 35);
-            this.button10.TabIndex = 23;
-            this.button10.UseVisualStyleBackColor = true;
+            this.button_islemleryenile.BackgroundImage = global::PCMagTool.Properties.Resources.yenile;
+            this.button_islemleryenile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_islemleryenile.Location = new System.Drawing.Point(431, 509);
+            this.button_islemleryenile.Name = "button_islemleryenile";
+            this.button_islemleryenile.Size = new System.Drawing.Size(35, 35);
+            this.button_islemleryenile.TabIndex = 23;
+            this.button_islemleryenile.UseVisualStyleBackColor = true;
+            this.button_islemleryenile.Click += new System.EventHandler(this.button_islemleryenile_Click);
             // 
-            // button9
+            // button_islemsonlandir
             // 
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.ImageIndex = 17;
-            this.button9.ImageList = this.ımageList1;
-            this.button9.Location = new System.Drawing.Point(472, 509);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(229, 35);
-            this.button9.TabIndex = 22;
-            this.button9.Text = "Seçili Görevi Sonlandır";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button_islemsonlandir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_islemsonlandir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_islemsonlandir.ImageIndex = 17;
+            this.button_islemsonlandir.ImageList = this.ımageList1;
+            this.button_islemsonlandir.Location = new System.Drawing.Point(472, 509);
+            this.button_islemsonlandir.Name = "button_islemsonlandir";
+            this.button_islemsonlandir.Size = new System.Drawing.Size(229, 35);
+            this.button_islemsonlandir.TabIndex = 22;
+            this.button_islemsonlandir.Text = "Seçili Görevi Sonlandır";
+            this.button_islemsonlandir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_islemsonlandir.UseVisualStyleBackColor = true;
+            this.button_islemsonlandir.Click += new System.EventHandler(this.button_islemsonlandir_Click);
             // 
             // listView_islemler
             // 
@@ -820,8 +823,9 @@ namespace PCMagTool
             // tabPage_hizmetler
             // 
             this.tabPage_hizmetler.BackColor = System.Drawing.Color.White;
-            this.tabPage_hizmetler.Controls.Add(this.button11);
-            this.tabPage_hizmetler.Controls.Add(this.button12);
+            this.tabPage_hizmetler.Controls.Add(this.button_hizmetbaslat);
+            this.tabPage_hizmetler.Controls.Add(this.button_hizmetyenile);
+            this.tabPage_hizmetler.Controls.Add(this.button_hizmetsonlandir);
             this.tabPage_hizmetler.Controls.Add(this.listView_hizmetler);
             this.tabPage_hizmetler.Location = new System.Drawing.Point(4, 34);
             this.tabPage_hizmetler.Name = "tabPage_hizmetler";
@@ -829,29 +833,46 @@ namespace PCMagTool
             this.tabPage_hizmetler.TabIndex = 3;
             this.tabPage_hizmetler.Text = "Hizmetler";
             // 
-            // button11
+            // button_hizmetbaslat
             // 
-            this.button11.BackgroundImage = global::PCMagTool.Properties.Resources.yenile;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button11.Location = new System.Drawing.Point(431, 509);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(35, 35);
-            this.button11.TabIndex = 25;
-            this.button11.UseVisualStyleBackColor = true;
+            this.button_hizmetbaslat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_hizmetbaslat.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_hizmetbaslat.ImageIndex = 18;
+            this.button_hizmetbaslat.ImageList = this.ımageList1;
+            this.button_hizmetbaslat.Location = new System.Drawing.Point(196, 509);
+            this.button_hizmetbaslat.Name = "button_hizmetbaslat";
+            this.button_hizmetbaslat.Size = new System.Drawing.Size(229, 35);
+            this.button_hizmetbaslat.TabIndex = 26;
+            this.button_hizmetbaslat.Text = "Seçili Hizmeti Başlat";
+            this.button_hizmetbaslat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_hizmetbaslat.UseVisualStyleBackColor = true;
+            this.button_hizmetbaslat.Click += new System.EventHandler(this.button_hizmetbaslat_Click);
             // 
-            // button12
+            // button_hizmetyenile
             // 
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button12.ImageIndex = 17;
-            this.button12.ImageList = this.ımageList1;
-            this.button12.Location = new System.Drawing.Point(472, 509);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(229, 35);
-            this.button12.TabIndex = 24;
-            this.button12.Text = "Seçili Hizmeti Durdur";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.UseVisualStyleBackColor = true;
+            this.button_hizmetyenile.BackgroundImage = global::PCMagTool.Properties.Resources.yenile;
+            this.button_hizmetyenile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_hizmetyenile.Location = new System.Drawing.Point(431, 509);
+            this.button_hizmetyenile.Name = "button_hizmetyenile";
+            this.button_hizmetyenile.Size = new System.Drawing.Size(35, 35);
+            this.button_hizmetyenile.TabIndex = 25;
+            this.button_hizmetyenile.UseVisualStyleBackColor = true;
+            this.button_hizmetyenile.Click += new System.EventHandler(this.button_hizmetyenile_Click);
+            // 
+            // button_hizmetsonlandir
+            // 
+            this.button_hizmetsonlandir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_hizmetsonlandir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_hizmetsonlandir.ImageIndex = 17;
+            this.button_hizmetsonlandir.ImageList = this.ımageList1;
+            this.button_hizmetsonlandir.Location = new System.Drawing.Point(472, 509);
+            this.button_hizmetsonlandir.Name = "button_hizmetsonlandir";
+            this.button_hizmetsonlandir.Size = new System.Drawing.Size(229, 35);
+            this.button_hizmetsonlandir.TabIndex = 24;
+            this.button_hizmetsonlandir.Text = "Seçili Hizmeti Durdur";
+            this.button_hizmetsonlandir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_hizmetsonlandir.UseVisualStyleBackColor = true;
+            this.button_hizmetsonlandir.Click += new System.EventHandler(this.button_hizmetsonlandir_Click);
             // 
             // listView_hizmetler
             // 
@@ -1123,19 +1144,20 @@ namespace PCMagTool
         private System.Windows.Forms.Button button_kopyatemizle;
         private System.Windows.Forms.Button button_kopyacikar;
         private System.Windows.Forms.Button button_kopyaekle;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button_islemsonlandir;
         private System.Windows.Forms.ListView listView_islemler;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button_islemleryenile;
         private System.Windows.Forms.TabPage tabPage_hizmetler;
         private System.Windows.Forms.ListView listView_hizmetler;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button_hizmetyenile;
+        private System.Windows.Forms.Button button_hizmetsonlandir;
+        private System.Windows.Forms.Button button_hizmetbaslat;
     }
 }
 

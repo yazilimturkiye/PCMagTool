@@ -15,6 +15,7 @@
   <ItemGroup>
     <None Include="bin\Debug\net5.0-windows\images\cikar.png" />
     <None Include="bin\Debug\net5.0-windows\images\ekle.png" />
+    <None Include="bin\Debug\net5.0-windows\images\onay.png" />
     <Content Include="bin\Debug\net5.0-windows\images\pcmagtool.ico" />
     <None Include="bin\Debug\net5.0-windows\images\yenile.png" />
   </ItemGroup>
