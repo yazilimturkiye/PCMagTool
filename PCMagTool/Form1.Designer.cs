@@ -59,7 +59,6 @@ namespace PCMagTool
             System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Kullanıcılar", 11, 11);
             System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("İşletim Sistemi", 5, 5);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.label_ustbaslik = new System.Windows.Forms.Label();
             this.label_altbaslik = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -123,21 +122,20 @@ namespace PCMagTool
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.button_ayarlar = new System.Windows.Forms.Button();
+            this.button_denetimmasasi = new System.Windows.Forms.Button();
+            this.button_gezgin = new System.Windows.Forms.Button();
+            this.button_hesapmakinasi = new System.Windows.Forms.Button();
+            this.button_cmd = new System.Windows.Forms.Button();
+            this.button_ekranyakala = new System.Windows.Forms.Button();
+            this.button_disktemizleme = new System.Windows.Forms.Button();
+            this.button_pckapat = new System.Windows.Forms.Button();
             this.pictureBox_hata = new System.Windows.Forms.PictureBox();
             this.label_hata = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage_donanim.SuspendLayout();
             this.tabPage_izleme.SuspendLayout();
@@ -151,18 +149,6 @@ namespace PCMagTool
             this.tabPage_hizmetler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_hata)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox_logo
-            // 
-            this.pictureBox_logo.BackColor = System.Drawing.Color.White;
-            this.pictureBox_logo.Image = global::PCMagTool.Properties.Resources.pcmagtool_logo_fw;
-            this.pictureBox_logo.Location = new System.Drawing.Point(675, 9);
-            this.pictureBox_logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_logo.TabIndex = 0;
-            this.pictureBox_logo.TabStop = false;
             // 
             // label_ustbaslik
             // 
@@ -364,7 +350,7 @@ namespace PCMagTool
             // 
             // ımageList1
             // 
-            this.ımageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.ımageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth24Bit;
             this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
             this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.ımageList1.Images.SetKeyName(0, "anakart.png");
@@ -386,6 +372,13 @@ namespace PCMagTool
             this.ımageList1.Images.SetKeyName(16, "ekran.png");
             this.ımageList1.Images.SetKeyName(17, "kapat.png");
             this.ımageList1.Images.SetKeyName(18, "onay.png");
+            this.ımageList1.Images.SetKeyName(19, "ayarlar.png");
+            this.ımageList1.Images.SetKeyName(20, "denetimmasasi.png");
+            this.ımageList1.Images.SetKeyName(21, "gezgin.png");
+            this.ımageList1.Images.SetKeyName(22, "cmd.png");
+            this.ımageList1.Images.SetKeyName(23, "disktemizleme.png");
+            this.ımageList1.Images.SetKeyName(24, "ekranyakala.png");
+            this.ımageList1.Images.SetKeyName(25, "hesapmakinesi.png");
             // 
             // tabPage_izleme
             // 
@@ -905,77 +898,91 @@ namespace PCMagTool
             this.columnHeader8.Text = "Açıklama";
             this.columnHeader8.Width = 301;
             // 
-            // button1
+            // button_ayarlar
             // 
-            this.button1.Location = new System.Drawing.Point(18, 68);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 50);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "x";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_ayarlar.ImageIndex = 19;
+            this.button_ayarlar.ImageList = this.ımageList1;
+            this.button_ayarlar.Location = new System.Drawing.Point(18, 68);
+            this.button_ayarlar.Name = "button_ayarlar";
+            this.button_ayarlar.Size = new System.Drawing.Size(50, 50);
+            this.button_ayarlar.TabIndex = 10;
+            this.button_ayarlar.UseVisualStyleBackColor = true;
+            this.button_ayarlar.Click += new System.EventHandler(this.button_ayarlar_Click);
             // 
-            // button2
+            // button_denetimmasasi
             // 
-            this.button2.Location = new System.Drawing.Point(74, 68);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 50);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "x";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_denetimmasasi.ImageIndex = 20;
+            this.button_denetimmasasi.ImageList = this.ımageList1;
+            this.button_denetimmasasi.Location = new System.Drawing.Point(74, 68);
+            this.button_denetimmasasi.Name = "button_denetimmasasi";
+            this.button_denetimmasasi.Size = new System.Drawing.Size(50, 50);
+            this.button_denetimmasasi.TabIndex = 11;
+            this.button_denetimmasasi.UseVisualStyleBackColor = true;
+            this.button_denetimmasasi.Click += new System.EventHandler(this.button_denetimmasasi_Click);
             // 
-            // button3
+            // button_gezgin
             // 
-            this.button3.Location = new System.Drawing.Point(130, 68);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 50);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "x";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button_gezgin.ImageIndex = 21;
+            this.button_gezgin.ImageList = this.ımageList1;
+            this.button_gezgin.Location = new System.Drawing.Point(130, 68);
+            this.button_gezgin.Name = "button_gezgin";
+            this.button_gezgin.Size = new System.Drawing.Size(50, 50);
+            this.button_gezgin.TabIndex = 12;
+            this.button_gezgin.UseVisualStyleBackColor = true;
+            this.button_gezgin.Click += new System.EventHandler(this.button_gezgin_Click);
             // 
-            // button4
+            // button_hesapmakinasi
             // 
-            this.button4.Location = new System.Drawing.Point(186, 68);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 50);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "x";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button_hesapmakinasi.ImageIndex = 25;
+            this.button_hesapmakinasi.ImageList = this.ımageList1;
+            this.button_hesapmakinasi.Location = new System.Drawing.Point(186, 68);
+            this.button_hesapmakinasi.Name = "button_hesapmakinasi";
+            this.button_hesapmakinasi.Size = new System.Drawing.Size(50, 50);
+            this.button_hesapmakinasi.TabIndex = 13;
+            this.button_hesapmakinasi.UseVisualStyleBackColor = true;
+            this.button_hesapmakinasi.Click += new System.EventHandler(this.button_hesapmakinasi_Click);
             // 
-            // button5
+            // button_cmd
             // 
-            this.button5.Location = new System.Drawing.Point(242, 68);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(50, 50);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "x";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button_cmd.ImageIndex = 22;
+            this.button_cmd.ImageList = this.ımageList1;
+            this.button_cmd.Location = new System.Drawing.Point(242, 68);
+            this.button_cmd.Name = "button_cmd";
+            this.button_cmd.Size = new System.Drawing.Size(50, 50);
+            this.button_cmd.TabIndex = 14;
+            this.button_cmd.UseVisualStyleBackColor = true;
+            this.button_cmd.Click += new System.EventHandler(this.button_cmd_Click);
             // 
-            // button6
+            // button_ekranyakala
             // 
-            this.button6.Location = new System.Drawing.Point(298, 68);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(50, 50);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "x";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button_ekranyakala.ImageIndex = 24;
+            this.button_ekranyakala.ImageList = this.ımageList1;
+            this.button_ekranyakala.Location = new System.Drawing.Point(298, 68);
+            this.button_ekranyakala.Name = "button_ekranyakala";
+            this.button_ekranyakala.Size = new System.Drawing.Size(50, 50);
+            this.button_ekranyakala.TabIndex = 15;
+            this.button_ekranyakala.UseVisualStyleBackColor = true;
+            this.button_ekranyakala.Click += new System.EventHandler(this.button_ekranyakala_Click);
             // 
-            // button7
+            // button_disktemizleme
             // 
-            this.button7.Location = new System.Drawing.Point(354, 68);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(50, 50);
-            this.button7.TabIndex = 16;
-            this.button7.Text = "x";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button_disktemizleme.ImageIndex = 23;
+            this.button_disktemizleme.ImageList = this.ımageList1;
+            this.button_disktemizleme.Location = new System.Drawing.Point(354, 68);
+            this.button_disktemizleme.Name = "button_disktemizleme";
+            this.button_disktemizleme.Size = new System.Drawing.Size(50, 50);
+            this.button_disktemizleme.TabIndex = 16;
+            this.button_disktemizleme.UseVisualStyleBackColor = true;
+            this.button_disktemizleme.Click += new System.EventHandler(this.button_disktemizleme_Click);
             // 
-            // button8
+            // button_pckapat
             // 
-            this.button8.Location = new System.Drawing.Point(410, 68);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(50, 50);
-            this.button8.TabIndex = 17;
-            this.button8.Text = "x";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button_pckapat.Location = new System.Drawing.Point(671, 68);
+            this.button_pckapat.Name = "button_pckapat";
+            this.button_pckapat.Size = new System.Drawing.Size(50, 50);
+            this.button_pckapat.TabIndex = 17;
+            this.button_pckapat.Text = "x";
+            this.button_pckapat.UseVisualStyleBackColor = true;
             // 
             // pictureBox_hata
             // 
@@ -1035,20 +1042,19 @@ namespace PCMagTool
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label_hata);
             this.Controls.Add(this.pictureBox_hata);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_pckapat);
+            this.Controls.Add(this.button_disktemizleme);
+            this.Controls.Add(this.button_ekranyakala);
+            this.Controls.Add(this.button_cmd);
+            this.Controls.Add(this.button_hesapmakinasi);
+            this.Controls.Add(this.button_gezgin);
+            this.Controls.Add(this.button_denetimmasasi);
+            this.Controls.Add(this.button_ayarlar);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar_islem);
             this.Controls.Add(this.label_altbaslik);
             this.Controls.Add(this.label_ustbaslik);
-            this.Controls.Add(this.pictureBox_logo);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1058,7 +1064,6 @@ namespace PCMagTool
             this.Name = "Form1";
             this.Text = "PC Management Tool";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage_donanim.ResumeLayout(false);
             this.tabPage_izleme.ResumeLayout(false);
@@ -1079,8 +1084,6 @@ namespace PCMagTool
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox_logo;
         private System.Windows.Forms.Label label_ustbaslik;
         private System.Windows.Forms.Label label_altbaslik;
         private System.Windows.Forms.Label label3;
@@ -1091,14 +1094,14 @@ namespace PCMagTool
         private System.Windows.Forms.TabPage tabPage_izleme;
         private System.Windows.Forms.TabPage tabPage_islemler;
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button_ayarlar;
+        private System.Windows.Forms.Button button_denetimmasasi;
+        private System.Windows.Forms.Button button_gezgin;
+        private System.Windows.Forms.Button button_hesapmakinasi;
+        private System.Windows.Forms.Button button_cmd;
+        private System.Windows.Forms.Button button_ekranyakala;
+        private System.Windows.Forms.Button button_disktemizleme;
+        private System.Windows.Forms.Button button_pckapat;
         private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.Button button_genislet;
         private System.Windows.Forms.PictureBox pictureBox_hata;

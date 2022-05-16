@@ -27,7 +27,7 @@ namespace PCMagTool
 
         PerformanceCounter performansCPU = new PerformanceCounter("Processor", "% Processor Time", "_Total");
         PerformanceCounter performansRAM = new PerformanceCounter("Memory", "% Committed Bytes In Use"); //Available MBytes
-        PerformanceCounter performansDisk = new PerformanceCounter("PhysicalDisk","% Disk Time","_Total" );
+        PerformanceCounter performansDisk = new PerformanceCounter("PhysicalDisk", "% Disk Time", "_Total");
         PerformanceCounter performansSistem = new PerformanceCounter("System", "System Up Time");
 
         public void islemler() //işlemler sekmesinde bulunan çalışan işlemleri gösteren kod bloğu.
@@ -362,7 +362,7 @@ namespace PCMagTool
                 label_mac.Text = mac;
 
                 label_bit.Text = System.Environment.Is64BitOperatingSystem.ToString(); //sistem türü.
-                
+
                 if (label_bit.Text == "True")
                 {
                     label_bit.Text = "x64";
@@ -447,7 +447,7 @@ namespace PCMagTool
             float fdisk = performansDisk.NextValue();
             progressBar_cpu.Value = (int)fcpu;
             progressBar_ram.Value = (int)fram;
-            progressBar_disk.Value =(int)fdisk;
+            progressBar_disk.Value = (int)fdisk;
             label_diskyuzde.Text = string.Format("{0:0.00}%", fdisk);
             label_cpuyuzde.Text = string.Format("{0:0.00}%", fcpu);
             label_ramyuzde.Text = string.Format("{0:0.00}%", fram);
@@ -491,7 +491,7 @@ namespace PCMagTool
             }
             else
             {
-                string[] bilgiekle = {kopyaekle, zaman}; 
+                string[] bilgiekle = { kopyaekle, zaman };
                 listView_kopya.Items.Add(new ListViewItem(bilgiekle));
             }
         }
@@ -500,13 +500,13 @@ namespace PCMagTool
         {
             foreach (ListViewItem secilioge in listView_kopya.CheckedItems)
             {
-            listView_kopya.Items.Remove(secilioge);
+                listView_kopya.Items.Remove(secilioge);
             }
         }
 
         private void button_kopyatemizle_Click(object sender, EventArgs e) //listview'e ekli olan itemleri silme.
         {
-            listView_kopya.Items.Clear(); 
+            listView_kopya.Items.Clear();
         }
 
         private void button_islemsonlandir_Click(object sender, EventArgs e) //islem sonlandırma.
@@ -598,6 +598,112 @@ namespace PCMagTool
         private void button_hizmetyenile_Click(object sender, EventArgs e) //hizmetler listesini yenileme.
         {
             hizmetler();
+        }
+
+        private void button_ayarlar_Click(object sender, EventArgs e) //ayarlar butonu.
+        {
+            try
+            {
+                Process ayarlar = new Process();
+                ayarlar.StartInfo.UseShellExecute = true;
+                ayarlar.StartInfo.FileName = "ms-settings:system";
+                ayarlar.Start();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ayarlar açılamadı.\nPCMagTool'un yönetici olarak çalıştırıldığından emin olun.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void button_denetimmasasi_Click(object sender, EventArgs e) //denetim masası butonu.
+        {
+            try
+            {
+                Process denetim = new Process();
+                denetim.StartInfo.UseShellExecute = true;
+                denetim.StartInfo.FileName = "control";
+                denetim.Start();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Denetim Masası açılamadı.\nPCMagTool'un yönetici olarak çalıştırıldığından emin olun.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void button_gezgin_Click(object sender, EventArgs e) //windows gezgini butonu.
+        {
+            try
+            {
+                Process gezgin = new Process();
+                gezgin.StartInfo.UseShellExecute = true;
+                gezgin.StartInfo.FileName = "explorer";
+                gezgin.Start();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Windows Gezgini açılamadı.\nPCMagTool'un yönetici olarak çalıştırıldığından emin olun.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void button_hesapmakinasi_Click(object sender, EventArgs e) //hesap makinesi butonu.
+        {
+            try
+            {
+                Process hesap = new Process();
+                hesap.StartInfo.UseShellExecute = true;
+                hesap.StartInfo.FileName = "calc";
+                hesap.Start();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Hesap Makinesi açılamadı.\nPCMagTool'un yönetici olarak çalıştırıldığından emin olun.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void button_cmd_Click(object sender, EventArgs e) //cmd butonu.
+        {
+            try
+            {
+                Process cmd = new Process();
+                cmd.StartInfo.UseShellExecute = true;
+                cmd.StartInfo.FileName = "cmd";
+                cmd.StartInfo.WorkingDirectory = @"C:\";
+                cmd.Start();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Komut Satırı açılamadı.\nPCMagTool'un yönetici olarak çalıştırıldığından emin olun.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void button_ekranyakala_Click(object sender, EventArgs e) //ekran yakalama butonu.
+        {
+            try
+            {
+                Process ekran = new Process();
+                ekran.StartInfo.UseShellExecute = true;
+                ekran.StartInfo.FileName = "snippingtool";
+                ekran.Start();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ekran Yakalama Aracı açılamadı.\nPCMagTool'un yönetici olarak çalıştırıldığından emin olun.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void button_disktemizleme_Click(object sender, EventArgs e) //Disk temizleme butonu.
+        {
+            try
+            {
+                Process ekran = new Process();
+                ekran.StartInfo.UseShellExecute = true;
+                ekran.StartInfo.FileName = "cleanmgr";
+                ekran.Start();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Disk Temizleme Aracı açılamadı.\nPCMagTool'un yönetici olarak çalıştırıldığından emin olun.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
