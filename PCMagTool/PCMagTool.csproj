@@ -16,6 +16,11 @@
     <None Include="bin\Debug\net5.0-windows\images\cikar.png" />
     <None Include="bin\Debug\net5.0-windows\images\ekle.png" />
     <None Include="bin\Debug\net5.0-windows\images\onay.png" />
+    <None Include="bin\Debug\net5.0-windows\images\klasor.png" />
+    <None Include="bin\Debug\net5.0-windows\images\hesap.png" />
+    <None Include="bin\Debug\net5.0-windows\images\ekranyakala.png" />
+    <None Include="bin\Debug\net5.0-windows\images\ayarlar.png" />
+    <None Include="bin\Debug\net5.0-windows\images\cmd.png" />
     <Content Include="bin\Debug\net5.0-windows\images\pcmagtool.ico" />
     <None Include="bin\Debug\net5.0-windows\images\yenile.png" />
   </ItemGroup>

@@ -123,13 +123,13 @@ namespace PCMagTool
             this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
             this.button_ayarlar = new System.Windows.Forms.Button();
+            this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
             this.button_denetimmasasi = new System.Windows.Forms.Button();
             this.button_gezgin = new System.Windows.Forms.Button();
             this.button_hesapmakinasi = new System.Windows.Forms.Button();
             this.button_cmd = new System.Windows.Forms.Button();
             this.button_ekranyakala = new System.Windows.Forms.Button();
             this.button_disktemizleme = new System.Windows.Forms.Button();
-            this.button_pckapat = new System.Windows.Forms.Button();
             this.pictureBox_hata = new System.Windows.Forms.PictureBox();
             this.label_hata = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -372,13 +372,6 @@ namespace PCMagTool
             this.ımageList1.Images.SetKeyName(16, "ekran.png");
             this.ımageList1.Images.SetKeyName(17, "kapat.png");
             this.ımageList1.Images.SetKeyName(18, "onay.png");
-            this.ımageList1.Images.SetKeyName(19, "ayarlar.png");
-            this.ımageList1.Images.SetKeyName(20, "denetimmasasi.png");
-            this.ımageList1.Images.SetKeyName(21, "gezgin.png");
-            this.ımageList1.Images.SetKeyName(22, "cmd.png");
-            this.ımageList1.Images.SetKeyName(23, "disktemizleme.png");
-            this.ımageList1.Images.SetKeyName(24, "ekranyakala.png");
-            this.ımageList1.Images.SetKeyName(25, "hesapmakinesi.png");
             // 
             // tabPage_izleme
             // 
@@ -552,6 +545,8 @@ namespace PCMagTool
             this.label_mac.Size = new System.Drawing.Size(199, 20);
             this.label_mac.TabIndex = 20;
             this.label_mac.Text = "-";
+            this.toolTip1.SetToolTip(this.label_mac, "MAC adresi kopyalamak için tıklayınız.");
+            this.label_mac.Click += new System.EventHandler(this.label_mac_Click);
             // 
             // label10
             // 
@@ -571,6 +566,8 @@ namespace PCMagTool
             this.label_ipadresi.Size = new System.Drawing.Size(162, 20);
             this.label_ipadresi.TabIndex = 18;
             this.label_ipadresi.Text = "-";
+            this.toolTip1.SetToolTip(this.label_ipadresi, "IP adresini kopyalamak için tıklayınız.");
+            this.label_ipadresi.Click += new System.EventHandler(this.label_ipadresi_Click);
             // 
             // label_hostname
             // 
@@ -580,6 +577,8 @@ namespace PCMagTool
             this.label_hostname.Size = new System.Drawing.Size(162, 20);
             this.label_hostname.TabIndex = 17;
             this.label_hostname.Text = "-";
+            this.toolTip1.SetToolTip(this.label_hostname, "Hostname\'i kopyalamak için tıklayınız.");
+            this.label_hostname.Click += new System.EventHandler(this.label_hostname_Click);
             // 
             // label_acikliksure
             // 
@@ -900,8 +899,8 @@ namespace PCMagTool
             // 
             // button_ayarlar
             // 
-            this.button_ayarlar.ImageIndex = 19;
-            this.button_ayarlar.ImageList = this.ımageList1;
+            this.button_ayarlar.ImageIndex = 5;
+            this.button_ayarlar.ImageList = this.ımageList2;
             this.button_ayarlar.Location = new System.Drawing.Point(18, 68);
             this.button_ayarlar.Name = "button_ayarlar";
             this.button_ayarlar.Size = new System.Drawing.Size(50, 50);
@@ -909,10 +908,23 @@ namespace PCMagTool
             this.button_ayarlar.UseVisualStyleBackColor = true;
             this.button_ayarlar.Click += new System.EventHandler(this.button_ayarlar_Click);
             // 
+            // ımageList2
+            // 
+            this.ımageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.ımageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList2.ImageStream")));
+            this.ımageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList2.Images.SetKeyName(0, "hdd.png");
+            this.ımageList2.Images.SetKeyName(1, "hesap.png");
+            this.ımageList2.Images.SetKeyName(2, "cmd.png");
+            this.ımageList2.Images.SetKeyName(3, "ekranyakala.png");
+            this.ımageList2.Images.SetKeyName(4, "klasor.png");
+            this.ımageList2.Images.SetKeyName(5, "ayarlar.png");
+            this.ımageList2.Images.SetKeyName(6, "kontrolpaneli.png");
+            // 
             // button_denetimmasasi
             // 
-            this.button_denetimmasasi.ImageIndex = 20;
-            this.button_denetimmasasi.ImageList = this.ımageList1;
+            this.button_denetimmasasi.ImageIndex = 6;
+            this.button_denetimmasasi.ImageList = this.ımageList2;
             this.button_denetimmasasi.Location = new System.Drawing.Point(74, 68);
             this.button_denetimmasasi.Name = "button_denetimmasasi";
             this.button_denetimmasasi.Size = new System.Drawing.Size(50, 50);
@@ -922,8 +934,8 @@ namespace PCMagTool
             // 
             // button_gezgin
             // 
-            this.button_gezgin.ImageIndex = 21;
-            this.button_gezgin.ImageList = this.ımageList1;
+            this.button_gezgin.ImageIndex = 4;
+            this.button_gezgin.ImageList = this.ımageList2;
             this.button_gezgin.Location = new System.Drawing.Point(130, 68);
             this.button_gezgin.Name = "button_gezgin";
             this.button_gezgin.Size = new System.Drawing.Size(50, 50);
@@ -933,8 +945,8 @@ namespace PCMagTool
             // 
             // button_hesapmakinasi
             // 
-            this.button_hesapmakinasi.ImageIndex = 25;
-            this.button_hesapmakinasi.ImageList = this.ımageList1;
+            this.button_hesapmakinasi.ImageIndex = 1;
+            this.button_hesapmakinasi.ImageList = this.ımageList2;
             this.button_hesapmakinasi.Location = new System.Drawing.Point(186, 68);
             this.button_hesapmakinasi.Name = "button_hesapmakinasi";
             this.button_hesapmakinasi.Size = new System.Drawing.Size(50, 50);
@@ -944,8 +956,8 @@ namespace PCMagTool
             // 
             // button_cmd
             // 
-            this.button_cmd.ImageIndex = 22;
-            this.button_cmd.ImageList = this.ımageList1;
+            this.button_cmd.ImageIndex = 2;
+            this.button_cmd.ImageList = this.ımageList2;
             this.button_cmd.Location = new System.Drawing.Point(242, 68);
             this.button_cmd.Name = "button_cmd";
             this.button_cmd.Size = new System.Drawing.Size(50, 50);
@@ -955,8 +967,8 @@ namespace PCMagTool
             // 
             // button_ekranyakala
             // 
-            this.button_ekranyakala.ImageIndex = 24;
-            this.button_ekranyakala.ImageList = this.ımageList1;
+            this.button_ekranyakala.ImageIndex = 3;
+            this.button_ekranyakala.ImageList = this.ımageList2;
             this.button_ekranyakala.Location = new System.Drawing.Point(298, 68);
             this.button_ekranyakala.Name = "button_ekranyakala";
             this.button_ekranyakala.Size = new System.Drawing.Size(50, 50);
@@ -966,23 +978,14 @@ namespace PCMagTool
             // 
             // button_disktemizleme
             // 
-            this.button_disktemizleme.ImageIndex = 23;
-            this.button_disktemizleme.ImageList = this.ımageList1;
+            this.button_disktemizleme.ImageIndex = 0;
+            this.button_disktemizleme.ImageList = this.ımageList2;
             this.button_disktemizleme.Location = new System.Drawing.Point(354, 68);
             this.button_disktemizleme.Name = "button_disktemizleme";
             this.button_disktemizleme.Size = new System.Drawing.Size(50, 50);
             this.button_disktemizleme.TabIndex = 16;
             this.button_disktemizleme.UseVisualStyleBackColor = true;
             this.button_disktemizleme.Click += new System.EventHandler(this.button_disktemizleme_Click);
-            // 
-            // button_pckapat
-            // 
-            this.button_pckapat.Location = new System.Drawing.Point(671, 68);
-            this.button_pckapat.Name = "button_pckapat";
-            this.button_pckapat.Size = new System.Drawing.Size(50, 50);
-            this.button_pckapat.TabIndex = 17;
-            this.button_pckapat.Text = "x";
-            this.button_pckapat.UseVisualStyleBackColor = true;
             // 
             // pictureBox_hata
             // 
@@ -1028,6 +1031,14 @@ namespace PCMagTool
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 3000;
+            this.toolTip1.InitialDelay = 500;
+            this.toolTip1.ReshowDelay = 100;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Bilgilendirme";
+            // 
             // timer2
             // 
             this.timer2.Enabled = true;
@@ -1042,7 +1053,6 @@ namespace PCMagTool
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label_hata);
             this.Controls.Add(this.pictureBox_hata);
-            this.Controls.Add(this.button_pckapat);
             this.Controls.Add(this.button_disktemizleme);
             this.Controls.Add(this.button_ekranyakala);
             this.Controls.Add(this.button_cmd);
@@ -1101,7 +1111,6 @@ namespace PCMagTool
         private System.Windows.Forms.Button button_cmd;
         private System.Windows.Forms.Button button_ekranyakala;
         private System.Windows.Forms.Button button_disktemizleme;
-        private System.Windows.Forms.Button button_pckapat;
         private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.Button button_genislet;
         private System.Windows.Forms.PictureBox pictureBox_hata;
@@ -1161,6 +1170,7 @@ namespace PCMagTool
         private System.Windows.Forms.Button button_hizmetyenile;
         private System.Windows.Forms.Button button_hizmetsonlandir;
         private System.Windows.Forms.Button button_hizmetbaslat;
+        private System.Windows.Forms.ImageList ımageList2;
     }
 }
 

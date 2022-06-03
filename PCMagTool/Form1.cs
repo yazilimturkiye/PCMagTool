@@ -705,5 +705,20 @@ namespace PCMagTool
                 MessageBox.Show("Disk Temizleme Aracı açılamadı.\nPCMagTool'un yönetici olarak çalıştırıldığından emin olun.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void label_hostname_Click(object sender, EventArgs e) //hostname kopylama.
+        {
+            Clipboard.SetText(label_hostname.Text);
+        }
+
+        private void label_ipadresi_Click(object sender, EventArgs e) //IP adresi kopylama.
+        {
+            Clipboard.SetText(label_ipadresi.Text);
+        }
+
+        private void label_mac_Click(object sender, EventArgs e) //MAC adresi kopyalama.
+        {
+            Clipboard.SetText(label_mac.Text);
+        }
     }
 }
