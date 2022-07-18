@@ -21,4 +21,4 @@ Uygulama açıldıktan sonra, sekmeler arasından kontrol etmek istediğiniz iş
 ### Diğer Araçlar Neler?
 PCMagTool ile aynı zamanda bilgisayarınızdaki birçok uygulamaya erişebilirsiniz. Erişebileceğiniz uygulamalar; Ayarlar, Denetm Masası, Dosya Yöneticisi, Hesap Makinesi, Komut penceresi, Ekran Yakalama Aracı, Disk Temizleme, Paint, Görev Yöneticisi.
 ### İndir
-Bu <b>[adresten](https://mega.nz/file/vxkQQarb#4nfUbLw2Vo68mSX8tyq-3-f49qW8EQSjIgvKwaQzm7Y)</b> Sertifika Kontrolcüsü v1.0 sürümünü indrebilirsiniz.
+Bu <b>[adresten](https://mega.nz/file/vxkQQarb#4nfUbLw2Vo68mSX8tyq-3-f49qW8EQSjIgvKwaQzm7Y)</b> PCMagTool'u indrebilirsiniz.
