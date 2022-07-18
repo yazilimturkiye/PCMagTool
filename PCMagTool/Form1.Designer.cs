@@ -30,34 +30,34 @@ namespace PCMagTool
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Ağ", 6, 6);
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Anakart", 0, 0);
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Batarya", 12, 12);
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("CPU", 2, 2);
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Depolama", 8, 8);
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Ekran", 16, 16);
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Fan", 13, 13);
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("GPU", 3, 3);
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Klavye", 14, 14);
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Optik Sürücü", 15, 15);
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("RAM", 4, 4);
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Ses", 9, 9);
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Bilgisayar", 1, 1, new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode6,
-            treeNode7,
-            treeNode8,
-            treeNode9,
-            treeNode10,
-            treeNode11,
-            treeNode12});
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Bios", 7, 7);
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Kullanıcılar", 11, 11);
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("İşletim Sistemi", 5, 5);
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Ağ", 6, 6);
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Anakart", 0, 0);
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Batarya", 12, 12);
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("CPU", 2, 2);
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Depolama", 8, 8);
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Ekran", 16, 16);
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Fan", 13, 13);
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("GPU", 3, 3);
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Klavye", 14, 14);
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Optik Sürücü", 15, 15);
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("RAM", 4, 4);
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Ses", 9, 9);
+            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Bilgisayar", 1, 1, new System.Windows.Forms.TreeNode[] {
+            treeNode17,
+            treeNode18,
+            treeNode19,
+            treeNode20,
+            treeNode21,
+            treeNode22,
+            treeNode23,
+            treeNode24,
+            treeNode25,
+            treeNode26,
+            treeNode27,
+            treeNode28});
+            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Bios", 7, 7);
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Kullanıcılar", 11, 11);
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("İşletim Sistemi", 5, 5);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label_ustbaslik = new System.Windows.Forms.Label();
             this.label_altbaslik = new System.Windows.Forms.Label();
@@ -135,6 +135,8 @@ namespace PCMagTool
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button_paint = new System.Windows.Forms.Button();
+            this.button_gorevyoneticisi = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage_donanim.SuspendLayout();
@@ -275,75 +277,75 @@ namespace PCMagTool
             this.treeView1.ItemHeight = 30;
             this.treeView1.Location = new System.Drawing.Point(-2, 0);
             this.treeView1.Name = "treeView1";
-            treeNode1.ImageIndex = 6;
-            treeNode1.Name = "altdugum_ag";
-            treeNode1.SelectedImageIndex = 6;
-            treeNode1.Text = "Ağ";
-            treeNode2.ImageIndex = 0;
-            treeNode2.Name = "altdugum_anakart";
-            treeNode2.SelectedImageIndex = 0;
-            treeNode2.Text = "Anakart";
-            treeNode3.ImageIndex = 12;
-            treeNode3.Name = "altdugum_batarya";
-            treeNode3.SelectedImageIndex = 12;
-            treeNode3.Text = "Batarya";
-            treeNode4.ImageIndex = 2;
-            treeNode4.Name = "altdugum_islemci";
-            treeNode4.SelectedImageIndex = 2;
-            treeNode4.Text = "CPU";
-            treeNode5.ImageIndex = 8;
-            treeNode5.Name = "altdugum_depolama";
-            treeNode5.SelectedImageIndex = 8;
-            treeNode5.Text = "Depolama";
-            treeNode6.ImageIndex = 16;
-            treeNode6.Name = "altdugum_ekran";
-            treeNode6.SelectedImageIndex = 16;
-            treeNode6.Text = "Ekran";
-            treeNode7.ImageIndex = 13;
-            treeNode7.Name = "altdugum_fan";
-            treeNode7.SelectedImageIndex = 13;
-            treeNode7.Text = "Fan";
-            treeNode8.ImageIndex = 3;
-            treeNode8.Name = "altdugum_ekran";
-            treeNode8.SelectedImageIndex = 3;
-            treeNode8.Text = "GPU";
-            treeNode9.ImageIndex = 14;
-            treeNode9.Name = "altdugum_klavye";
-            treeNode9.SelectedImageIndex = 14;
-            treeNode9.Text = "Klavye";
-            treeNode10.ImageIndex = 15;
-            treeNode10.Name = "altdugum_suruculer";
-            treeNode10.SelectedImageIndex = 15;
-            treeNode10.Text = "Optik Sürücü";
-            treeNode11.ImageIndex = 4;
-            treeNode11.Name = "altdugum_ram";
-            treeNode11.SelectedImageIndex = 4;
-            treeNode11.Text = "RAM";
-            treeNode12.ImageIndex = 9;
-            treeNode12.Name = "altdugum_ses";
-            treeNode12.SelectedImageIndex = 9;
-            treeNode12.Text = "Ses";
-            treeNode13.ImageIndex = 1;
-            treeNode13.Name = "kokdugum_bilgisayar";
-            treeNode13.SelectedImageIndex = 1;
-            treeNode13.Text = "Bilgisayar";
-            treeNode14.ImageIndex = 7;
-            treeNode14.Name = "kokdugum_bios";
-            treeNode14.SelectedImageIndex = 7;
-            treeNode14.Text = "Bios";
-            treeNode15.ImageIndex = 11;
-            treeNode15.Name = "kokdugum_kullanici";
-            treeNode15.SelectedImageIndex = 11;
-            treeNode15.Text = "Kullanıcılar";
-            treeNode16.ImageIndex = 5;
-            treeNode16.Name = "kokdugum_isletimsistemi";
-            treeNode16.SelectedImageIndex = 5;
-            treeNode16.Text = "İşletim Sistemi";
+            treeNode17.ImageIndex = 6;
+            treeNode17.Name = "altdugum_ag";
+            treeNode17.SelectedImageIndex = 6;
+            treeNode17.Text = "Ağ";
+            treeNode18.ImageIndex = 0;
+            treeNode18.Name = "altdugum_anakart";
+            treeNode18.SelectedImageIndex = 0;
+            treeNode18.Text = "Anakart";
+            treeNode19.ImageIndex = 12;
+            treeNode19.Name = "altdugum_batarya";
+            treeNode19.SelectedImageIndex = 12;
+            treeNode19.Text = "Batarya";
+            treeNode20.ImageIndex = 2;
+            treeNode20.Name = "altdugum_islemci";
+            treeNode20.SelectedImageIndex = 2;
+            treeNode20.Text = "CPU";
+            treeNode21.ImageIndex = 8;
+            treeNode21.Name = "altdugum_depolama";
+            treeNode21.SelectedImageIndex = 8;
+            treeNode21.Text = "Depolama";
+            treeNode22.ImageIndex = 16;
+            treeNode22.Name = "altdugum_ekran";
+            treeNode22.SelectedImageIndex = 16;
+            treeNode22.Text = "Ekran";
+            treeNode23.ImageIndex = 13;
+            treeNode23.Name = "altdugum_fan";
+            treeNode23.SelectedImageIndex = 13;
+            treeNode23.Text = "Fan";
+            treeNode24.ImageIndex = 3;
+            treeNode24.Name = "altdugum_ekran";
+            treeNode24.SelectedImageIndex = 3;
+            treeNode24.Text = "GPU";
+            treeNode25.ImageIndex = 14;
+            treeNode25.Name = "altdugum_klavye";
+            treeNode25.SelectedImageIndex = 14;
+            treeNode25.Text = "Klavye";
+            treeNode26.ImageIndex = 15;
+            treeNode26.Name = "altdugum_suruculer";
+            treeNode26.SelectedImageIndex = 15;
+            treeNode26.Text = "Optik Sürücü";
+            treeNode27.ImageIndex = 4;
+            treeNode27.Name = "altdugum_ram";
+            treeNode27.SelectedImageIndex = 4;
+            treeNode27.Text = "RAM";
+            treeNode28.ImageIndex = 9;
+            treeNode28.Name = "altdugum_ses";
+            treeNode28.SelectedImageIndex = 9;
+            treeNode28.Text = "Ses";
+            treeNode29.ImageIndex = 1;
+            treeNode29.Name = "kokdugum_bilgisayar";
+            treeNode29.SelectedImageIndex = 1;
+            treeNode29.Text = "Bilgisayar";
+            treeNode30.ImageIndex = 7;
+            treeNode30.Name = "kokdugum_bios";
+            treeNode30.SelectedImageIndex = 7;
+            treeNode30.Text = "Bios";
+            treeNode31.ImageIndex = 11;
+            treeNode31.Name = "kokdugum_kullanici";
+            treeNode31.SelectedImageIndex = 11;
+            treeNode31.Text = "Kullanıcılar";
+            treeNode32.ImageIndex = 5;
+            treeNode32.Name = "kokdugum_isletimsistemi";
+            treeNode32.SelectedImageIndex = 5;
+            treeNode32.Text = "İşletim Sistemi";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode13,
-            treeNode14,
-            treeNode15,
-            treeNode16});
+            treeNode29,
+            treeNode30,
+            treeNode31,
+            treeNode32});
             this.treeView1.SelectedImageIndex = 10;
             this.treeView1.Size = new System.Drawing.Size(713, 550);
             this.treeView1.TabIndex = 1;
@@ -905,6 +907,7 @@ namespace PCMagTool
             this.button_ayarlar.Name = "button_ayarlar";
             this.button_ayarlar.Size = new System.Drawing.Size(50, 50);
             this.button_ayarlar.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.button_ayarlar, "Ayarlar");
             this.button_ayarlar.UseVisualStyleBackColor = true;
             this.button_ayarlar.Click += new System.EventHandler(this.button_ayarlar_Click);
             // 
@@ -920,6 +923,8 @@ namespace PCMagTool
             this.ımageList2.Images.SetKeyName(4, "klasor.png");
             this.ımageList2.Images.SetKeyName(5, "ayarlar.png");
             this.ımageList2.Images.SetKeyName(6, "kontrolpaneli.png");
+            this.ımageList2.Images.SetKeyName(7, "gorev.png");
+            this.ımageList2.Images.SetKeyName(8, "paint.png");
             // 
             // button_denetimmasasi
             // 
@@ -929,6 +934,7 @@ namespace PCMagTool
             this.button_denetimmasasi.Name = "button_denetimmasasi";
             this.button_denetimmasasi.Size = new System.Drawing.Size(50, 50);
             this.button_denetimmasasi.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.button_denetimmasasi, "Denetim Masası");
             this.button_denetimmasasi.UseVisualStyleBackColor = true;
             this.button_denetimmasasi.Click += new System.EventHandler(this.button_denetimmasasi_Click);
             // 
@@ -940,6 +946,7 @@ namespace PCMagTool
             this.button_gezgin.Name = "button_gezgin";
             this.button_gezgin.Size = new System.Drawing.Size(50, 50);
             this.button_gezgin.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.button_gezgin, "Dosya Yöneticisi");
             this.button_gezgin.UseVisualStyleBackColor = true;
             this.button_gezgin.Click += new System.EventHandler(this.button_gezgin_Click);
             // 
@@ -951,6 +958,7 @@ namespace PCMagTool
             this.button_hesapmakinasi.Name = "button_hesapmakinasi";
             this.button_hesapmakinasi.Size = new System.Drawing.Size(50, 50);
             this.button_hesapmakinasi.TabIndex = 13;
+            this.toolTip1.SetToolTip(this.button_hesapmakinasi, "Hesap Makinesi");
             this.button_hesapmakinasi.UseVisualStyleBackColor = true;
             this.button_hesapmakinasi.Click += new System.EventHandler(this.button_hesapmakinasi_Click);
             // 
@@ -962,6 +970,7 @@ namespace PCMagTool
             this.button_cmd.Name = "button_cmd";
             this.button_cmd.Size = new System.Drawing.Size(50, 50);
             this.button_cmd.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.button_cmd, "Komut Penceresi");
             this.button_cmd.UseVisualStyleBackColor = true;
             this.button_cmd.Click += new System.EventHandler(this.button_cmd_Click);
             // 
@@ -973,6 +982,7 @@ namespace PCMagTool
             this.button_ekranyakala.Name = "button_ekranyakala";
             this.button_ekranyakala.Size = new System.Drawing.Size(50, 50);
             this.button_ekranyakala.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.button_ekranyakala, "Ekran Yakalama Aracı");
             this.button_ekranyakala.UseVisualStyleBackColor = true;
             this.button_ekranyakala.Click += new System.EventHandler(this.button_ekranyakala_Click);
             // 
@@ -984,6 +994,7 @@ namespace PCMagTool
             this.button_disktemizleme.Name = "button_disktemizleme";
             this.button_disktemizleme.Size = new System.Drawing.Size(50, 50);
             this.button_disktemizleme.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.button_disktemizleme, "Disk Temizleme");
             this.button_disktemizleme.UseVisualStyleBackColor = true;
             this.button_disktemizleme.Click += new System.EventHandler(this.button_disktemizleme_Click);
             // 
@@ -1036,8 +1047,30 @@ namespace PCMagTool
             this.toolTip1.AutoPopDelay = 3000;
             this.toolTip1.InitialDelay = 500;
             this.toolTip1.ReshowDelay = 100;
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip1.ToolTipTitle = "Bilgilendirme";
+            // 
+            // button_paint
+            // 
+            this.button_paint.ImageIndex = 8;
+            this.button_paint.ImageList = this.ımageList2;
+            this.button_paint.Location = new System.Drawing.Point(410, 68);
+            this.button_paint.Name = "button_paint";
+            this.button_paint.Size = new System.Drawing.Size(50, 50);
+            this.button_paint.TabIndex = 21;
+            this.toolTip1.SetToolTip(this.button_paint, "Paint");
+            this.button_paint.UseVisualStyleBackColor = true;
+            this.button_paint.Click += new System.EventHandler(this.button_paint_Click);
+            // 
+            // button_gorevyoneticisi
+            // 
+            this.button_gorevyoneticisi.ImageIndex = 7;
+            this.button_gorevyoneticisi.ImageList = this.ımageList2;
+            this.button_gorevyoneticisi.Location = new System.Drawing.Point(466, 68);
+            this.button_gorevyoneticisi.Name = "button_gorevyoneticisi";
+            this.button_gorevyoneticisi.Size = new System.Drawing.Size(50, 50);
+            this.button_gorevyoneticisi.TabIndex = 22;
+            this.toolTip1.SetToolTip(this.button_gorevyoneticisi, "Görev Yöneticisi");
+            this.button_gorevyoneticisi.UseVisualStyleBackColor = true;
+            this.button_gorevyoneticisi.Click += new System.EventHandler(this.button_gorevyoneticisi_Click);
             // 
             // timer2
             // 
@@ -1050,6 +1083,8 @@ namespace PCMagTool
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 761);
+            this.Controls.Add(this.button_gorevyoneticisi);
+            this.Controls.Add(this.button_paint);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label_hata);
             this.Controls.Add(this.pictureBox_hata);
@@ -1171,6 +1206,8 @@ namespace PCMagTool
         private System.Windows.Forms.Button button_hizmetsonlandir;
         private System.Windows.Forms.Button button_hizmetbaslat;
         private System.Windows.Forms.ImageList ımageList2;
+        private System.Windows.Forms.Button button_paint;
+        private System.Windows.Forms.Button button_gorevyoneticisi;
     }
 }
 

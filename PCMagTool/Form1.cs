@@ -720,5 +720,35 @@ namespace PCMagTool
         {
             Clipboard.SetText(label_mac.Text);
         }
+
+        private void button_paint_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process ekran = new Process();
+                ekran.StartInfo.UseShellExecute = true;
+                ekran.StartInfo.FileName = "mspaint";
+                ekran.Start();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Paint açılamadı.\nPCMagTool'un yönetici olarak çalıştırıldığından emin olun.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void button_gorevyoneticisi_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process ekran = new Process();
+                ekran.StartInfo.UseShellExecute = true;
+                ekran.StartInfo.FileName = "taskmgr";
+                ekran.Start();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Görev Yöneticisi açılamadı.\nPCMagTool'un yönetici olarak çalıştırıldığından emin olun.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
