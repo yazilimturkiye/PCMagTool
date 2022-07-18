@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32228.343
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCMagTool", "PCMagTool\PCMagTool.csproj", "{69FE4B38-96DB-4186-8C0A-51940EE94E9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PCMagTool", "PCMagTool\PCMagTool.csproj", "{69FE4B38-96DB-4186-8C0A-51940EE94E9A}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PCMagTool_v1.0_Setup", "PCMagTool_v1.0_Setup\PCMagTool_v1.0_Setup.vdproj", "{BF25EA91-B895-4784-BF1D-335359199633}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{69FE4B38-96DB-4186-8C0A-51940EE94E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69FE4B38-96DB-4186-8C0A-51940EE94E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69FE4B38-96DB-4186-8C0A-51940EE94E9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF25EA91-B895-4784-BF1D-335359199633}.Debug|Any CPU.ActiveCfg = Debug
+		{BF25EA91-B895-4784-BF1D-335359199633}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
