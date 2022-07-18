@@ -1,5 +1,5 @@
 # PCMagTool
-Bilgisayar Yönetim Aracı
+PCMagTool, Windows bilgisayarları yönetimini ve kontrolünü sağlayan ücretsiz bir araçtır.
 
 <p align="center">
   <img width="400" height="250" src="https://www.yazilimturkiye.com/wp-content/uploads/2022/07/PCMagTool.jpg">
@@ -10,6 +10,15 @@ PCMagTool .Net 5.0 ortamında geliştirilmiş bir Windows işletim sistemlerine 
 
 ### Nasıl Çalışır?
 Uygulama açıldıktan sonra, sekmeler arasından kontrol etmek istediğiniz işlem başlığını seçerek başlayabilirsiniz. İşlem başlıkları şu şekilde sıralanmaktadır;
-
+- Donanım
+- - Bu sekmeden bilgisayarınızın sahip olduğu donanımlar hakkında ayrıntılı bilgi alabilir ve bu bilgiyi çıktı olarak indirebilirsiniz.
+- İzleme
+- - Bilgisayarın anlık olarak RAM, CPU, Disk ve diğer bilgilerini takip edebileceğiniz sekmedir.
+- İşlemler
+- - Bilgisayarınızdaki çalışmakta olan işlemleri kontrol edebileceğiniz sekme.
+- Hizmetler
+- - Bilgisayarınızdaki çalışmakta olan hizmetleri kontrol edebileceğiniz sekme.
+### Diğer Araçlar Neler?
+PCMagTool ile aynı zamanda bilgisayarınızdaki birçok uygulamaya erişebilirsiniz. Erişebileceğiniz uygulamalar; Ayarlar, Denetm Masası, Dosya Yöneticisi, Hesap Makinesi, Komut penceresi, Ekran Yakalama Aracı, Disk Temizleme, Paint, Görev Yöneticisi.
 ### İndir
 Bu <b>[adresten](https://mega.nz/file/vxkQQarb#4nfUbLw2Vo68mSX8tyq-3-f49qW8EQSjIgvKwaQzm7Y)</b> Sertifika Kontrolcüsü v1.0 sürümünü indrebilirsiniz.
