@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "nYcBNWng+qL3u37vY5Ug9g+agjsDrKdI9Qd4tU4F5fzzVT4CKtZV15tkVtKoA6DWVuHumbtUMDxq+9ECc4VoQg==",
+  "dgSpecHash": "HzTkKH4ir2xNEOOiErDjhz9+JAW47mfkq+G79ZzQuHNS3splR6dgnzyvY9jUC+HQzQHJ/5yfNEVuE2yRBASoZA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Yılmaz Mert Çayır\\source\\repos\\PCMagTool\\PCMagTool\\PCMagTool.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
@@ -12,11 +11,9 @@
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.diagnostics.performancecounter\\6.0.1\\system.diagnostics.performancecounter.6.0.1.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512",
-    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
-    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.serviceprocess.servicecontroller\\6.0.0\\system.serviceprocess.servicecontroller.6.0.0.nupkg.sha512",
     "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],

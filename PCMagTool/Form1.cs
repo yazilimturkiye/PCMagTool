@@ -399,45 +399,40 @@ namespace PCMagTool
         }
         private void button_DisariAktar_Click(object sender, EventArgs e) //Treeview içeriğini dışarı aktarma.
         {
-            timer2.Start(); //her işlem sonrası üst bardaki ilerleyen progressbar için gerekli timer.
-            if (progressBar_islem.Value == 100)
+            timer2.Start();
+            try
             {
-                try
+                void TXTOlustur() //Treview içindeki veriyi aşağıdaki konumu dışarı aktaran kod bloğu.
                 {
-                    void TXTOlustur() //Treview içindeki veriyi aşağıdaki konumu dışarı aktaran kod bloğu.
-                    {
-                        System.Text.StringBuilder buffer = new System.Text.StringBuilder();
-                        foreach (TreeNode rootNode in treeView1.Nodes)
-                            TreeViewOlustur(rootNode, buffer);
-                        System.IO.File.WriteAllText(@"C:\PCMagTool.txt", buffer.ToString());
-                    }
+                    string kullanici_yolu = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                    System.Text.StringBuilder buffer = new System.Text.StringBuilder();
+                    foreach (TreeNode rootNode in treeView1.Nodes)
+                        TreeViewOlustur(rootNode, buffer);
+                    System.IO.File.WriteAllText(kullanici_yolu + "\\PCMagTool.txt", buffer.ToString());
+                }
 
-                    void TreeViewOlustur(TreeNode rootNode, System.Text.StringBuilder buffer)
-                    {
-                        buffer.Append(rootNode.Text);
-                        buffer.Append(Environment.NewLine);
-                        foreach (TreeNode childNode in rootNode.Nodes)
-                            TreeViewOlustur(childNode, buffer);
-                    }
-                    TXTOlustur();
-                    pictureBox_hata.Visible = true;
-                    label_hata.Visible = true;
-                    pictureBox_hata.Image = Properties.Resources.gecerli;
-                    label_hata.Text = "İşlem başarılı. Dosya konumu : 'C:/PCMagTool.txt'";
-                    timer2.Stop();
-                }
-                catch (Exception)
+                void TreeViewOlustur(TreeNode rootNode, System.Text.StringBuilder buffer)
                 {
-                    pictureBox_hata.Visible = true;
-                    label_hata.Visible = true;
-                    pictureBox_hata.Image = Properties.Resources.hata;
-                    label_hata.Text = "İşlem başarısız. Uygulamanın yönetici olarak çalıştırıldığına emin olun.";
+                    buffer.Append(rootNode.Text);
+                    buffer.Append(Environment.NewLine);
+                    foreach (TreeNode childNode in rootNode.Nodes)
+                        TreeViewOlustur(childNode, buffer);
                 }
-            }
-            else
-            {
+                TXTOlustur();
+                pictureBox_hata.Visible = true;
+                label_hata.Visible = true;
+                pictureBox_hata.Image = Properties.Resources.gecerli;
+                label_hata.Text = "İşlem başarılı. Dosya Masaüstüne kaydedildi.";
 
             }
+            catch (Exception)
+            {
+                pictureBox_hata.Visible = true;
+                label_hata.Visible = true;
+                pictureBox_hata.Image = Properties.Resources.hata;
+                label_hata.Text = "İşlem başarısız. Uygulamanın yönetici olarak çalıştırıldığına emin olun.";
+            }
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
