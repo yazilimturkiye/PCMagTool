@@ -5,8 +5,6 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PCMagTool", "PCMagTool\PCMagTool.csproj", "{69FE4B38-96DB-4186-8C0A-51940EE94E9A}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PCMagTool_Setup", "PCMagTool_Setup\PCMagTool_Setup.vdproj", "{8511F1BB-FE5A-4C3C-B38A-A56B2E2BA5C8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,8 +15,6 @@ Global
 		{69FE4B38-96DB-4186-8C0A-51940EE94E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69FE4B38-96DB-4186-8C0A-51940EE94E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69FE4B38-96DB-4186-8C0A-51940EE94E9A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8511F1BB-FE5A-4C3C-B38A-A56B2E2BA5C8}.Debug|Any CPU.ActiveCfg = Debug
-		{8511F1BB-FE5A-4C3C-B38A-A56B2E2BA5C8}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

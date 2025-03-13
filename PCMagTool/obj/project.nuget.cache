@@ -1,21 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "cfRvo/WpYXQAPP0R3V4N/6f5hmeJvPQEquCxJkMzutD8CI7S2uFLWVCzRzMRMIHxW4TXU/RMqtD8SsS8NJ8yew==",
+  "dgSpecHash": "SukWCS05LmQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Yılmaz Mert Çayır\\source\\repos\\PCMagTool\\PCMagTool\\PCMagTool.csproj",
+  "projectFilePath": "C:\\Users\\ylmzmrtcyr\\Documents\\GitHub\\PCMagTool\\PCMagTool\\PCMagTool.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
-    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
-    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
-    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
-    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.diagnostics.performancecounter\\6.0.1\\system.diagnostics.performancecounter.6.0.1.nupkg.sha512",
-    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
-    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512",
-    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
-    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
-    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
-    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.serviceprocess.servicecontroller\\6.0.0\\system.serviceprocess.servicecontroller.6.0.0.nupkg.sha512",
-    "C:\\Users\\Yılmaz Mert Çayır\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+    "C:\\Users\\ylmzmrtcyr\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\ylmzmrtcyr\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
+    "C:\\Users\\ylmzmrtcyr\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
+    "C:\\Users\\ylmzmrtcyr\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
+    "C:\\Users\\ylmzmrtcyr\\.nuget\\packages\\system.diagnostics.performancecounter\\6.0.1\\system.diagnostics.performancecounter.6.0.1.nupkg.sha512",
+    "C:\\Users\\ylmzmrtcyr\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\ylmzmrtcyr\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512",
+    "C:\\Users\\ylmzmrtcyr\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "C:\\Users\\ylmzmrtcyr\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
+    "C:\\Users\\ylmzmrtcyr\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
+    "C:\\Users\\ylmzmrtcyr\\.nuget\\packages\\system.serviceprocess.servicecontroller\\6.0.0\\system.serviceprocess.servicecontroller.6.0.0.nupkg.sha512",
+    "C:\\Users\\ylmzmrtcyr\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\ylmzmrtcyr\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.22000.57\\microsoft.windows.sdk.net.ref.10.0.22000.57.nupkg.sha512"
   ],
   "logs": []
 }

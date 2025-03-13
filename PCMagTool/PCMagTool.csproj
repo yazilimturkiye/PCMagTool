@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net9.0-windows10.0.22000.0</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <Description>PC Management Tool v1.0</Description>
     <ApplicationIcon>bin\Debug\net5.0-windows\images\pcmagtool.ico</ApplicationIcon>
